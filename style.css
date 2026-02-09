@@ -1,0 +1,111 @@
+body {
+    background-image: 
+        url("Images/balon.png"),
+        url("Images/balon.png");
+    background-position:  
+        top 100px left -40px,
+        bottom 80px right -40px;
+    background-repeat: no-repeat;
+    background-size: 180px;
+}
+
+.modal-content {
+    background-image:
+        url("Images/balon3.png"),
+        url("Images/balon3.png");
+    background-position:
+        top 90px right -40px,
+        bottom -40px left -40px;
+    background-repeat: no-repeat;
+    background-size: 160px;
+}
+
+/* Quita los balones SOLO en este modal */
+#modalScamera .modal-content::before {
+    content: none;
+}
+
+
+.balon {
+    position: absolute;
+    width: 180px;              /* ajusta tamaño */
+    opacity: 0.50;             /* efecto sutil */
+    pointer-events: none;      /* no interfiere con clicks */
+    z-index: 0;                /* detrás del contenido */
+}
+
+.brand-font {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #4a7c2c;
+}
+
+.brand-fontB {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000; 
+}
+.green-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #4a7c2c;
+}
+
+.title-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.btn-green {
+    background-color: #4a7c2c;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.btn-green:hover {
+    background-color: #33551e;
+    color: #fff;
+}
+
+.bg-green {
+    background-color: #4F7E25;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+
+.bg-lgreen {
+    background-color: #DAEFC8;
+    color: #000000;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.bg-light {
+    background-color: #FAFAF5;
+    color: #000000;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+/* Sombra y transición para todos los cuadros */
+.bg-green, .bg-lgreen, .bg-light {
+    transition: all 0.3s ease; /* suaviza el efecto */
+}
+
+/* Sombra al pasar el mouse */
+.bg-green:hover, .bg-lgreen:hover, .bg-light:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra suave */
+    transform: translateY(-3px); /* leve levantamiento */
+}
+
+
