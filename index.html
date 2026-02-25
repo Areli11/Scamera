@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
     <nav class="navbar navbar-light bg-white px-4">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -56,12 +57,12 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>Scamera es una herramienta innovadora que te permite escanear x utilizando la cámara de tu dispositivo. 
+                    <p>Scamera es una herramienta innovadora que te permite escanear escudos utilizando la cámara de tu dispositivo. 
                         Sigue estos sencillos pasos para comenzar:
                     </p>
                     <ul>
                         <li>Abre tu cámara</li>
-                        <li>Scanea la x de futbol</li>
+                        <li>Scanea el escudo del equipo de futbol</li>
                         <li>Navega por las diferentes opciones</li>
                     </ul>
                     <p>Opciones disponibles:</p>
@@ -144,30 +145,38 @@
                 </div>
 
                 <!-- CONTENEDOR FLEX para modelo + info -->
-                <h3 class="title-font text-start ps-5 pt-4 pb-0 w-100">Nombre del equipo</h3>
+                <h3 class="brand-fontB text-start ps-5 pt-4 pb-0 w-100">ESPAÑA</h3>
                 <div class="modal-body d-flex flex-column flex-md-row-reverse gap-4">
 
                     <!-- Modelo 3D y botón -->
                     <div class="d-flex flex-column align-items-center" style="min-width: 350px;">
                         
-                        <div class="bg-dark me-3" style="width:350px; height:430px;"></div>
+                        <div id="modelo3d" class="bg-dark me-3" style="width:350px; height:430px;"></div>
                         <p class="text-center mt-4">Modelo 3D</p>
                         <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
-                            <button class="btn btn-green">Activar animación</button>
+                            <button id="activarAnimacion" class="btn btn-green">Activar animación</button>
+                            <button id="detenerAnimacion" class="btn btn-outline-dark">Detener animación</button>
                         </div>
                     </div>
 
                     <!-- Info -->
                     <div class="flex-grow-1">
+                        <h5 class="mb-3 ms-4 me-4 fw-bold">Tradición de las corridas de toro </h5>
                         <p class="text-start mt-2 ms-4 me-4">
-                            Información del equipo, como historia, jugadores destacados, estadísticas y curiosidades.
-                            Texto de ejemplo para llenar el espacio, este texto se puede reemplazar con la información real del equipo escaneado.
-                            historia, jugadores destacados, estadísticas y curiosidades.
-                            mas historia, jugadores destacados, estadísticas y curiosidades.
-                            una historia, jugadores destacados, estadísticas y curiosidades.
-                            información del equipo, como historia, jugadores destacados, estadísticas y curiosidades.
-                            otra historia, jugadores destacados, estadísticas y curiosidades.
-                    </p>
+                            La tauromaquia —el arte de lidiar toros— ha sido una tradición arraigada en España durante siglos y ha influido en su arte, 
+                            literatura y cultura popular. A través de las corridas de toros, el toro de lidia y las plazas tradicionales han sido símbolos
+                            de identidad y ceremonia social, regulados históricamente por normas estéticas y ritualizadas. Aunque esta práctica genera debate en 
+                            la actualidad, su presencia en la cultura ibérica se observa también en el arte y la historia, y está reconocida en la legislación española 
+                            como parte del patrimonio cultural. 
+                        </p> 
+                        <h5 class="mb-3 ms-4 me-4 fw-bold">Fútbol en España </h5>
+                        <p class="text-start mt-2 ms-4 me-4">
+                            La selección española de fútbol —conocida como La Roja— es una de las selecciones más exitosas de Europa y del mundo. 
+                            España ha participado en múltiples Copas del Mundo desde 1934, coronándose campeona del mundo en 2010 y ganando la Eurocopa en 1964, 
+                            2008, 2012 y 2024, consolidando su estilo de juego distintivo basado en posesión y técnica. Además, la selección femenina también ha 
+                            emergido como una potencia global, conquistando el Mundial de 2023 y la UEFA Nations League. Estos logros ilustran la importancia del 
+                            fútbol en la identidad deportiva española y su influencia continua en el fútbol mundial. 
+                        </p>
                     </div>
                 </div>
             </div>
@@ -201,14 +210,14 @@
 
                         <div class="flex-grow-1 px-3 py-2">
                             <p class="mb-2 fw-bold" style="max-width: 500px;">
-                                ¿Cuántos jugadores tiene un equipo de fútbol en la cancha?
+                                ¿En qué año España ganó su primera Copa del Mundo masculina?
                             </p>
 
                             <div class="d-flex flex-wrap gap-2">
-                                <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;">A) 9</button>
-                                <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;">B) 10</button>
-                                <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;">C) 11</button>
-                                <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;">D) 12</button>
+                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="false" >A) 2006</button>
+                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="false" >B) 2008</button>
+                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="true" >C) 2010</button>
+                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="false" >D) 2012</button>
                             </div>
                         </div>
                     </li>
@@ -223,13 +232,13 @@
 
                         <div class="flex-grow-1 px-3">
                         <p class="mb-2 fw-bold" style="max-width: 500px;">
-                            ¿Cada cuántos años se juega el Mundial de Fútbol?
+                            ¿Qué estilo de juego popularizó España durante su época dorada (2008-2012)?
                         </p>
                         <div class="d-flex flex-wrap gap-2">
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;">A) 2</button>
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;">B) 3</button>
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;">C) 4</button>
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;">D) 5</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="false">A) Catenaccio</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="true">B) Tiki-taka</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="false">C) Fútbol directo</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="false">D) Gegenpressing</button>
                         </div>
                         </div>
                     </li>
@@ -242,13 +251,13 @@
                         </div>
                         <div class="flex-grow-1 px-3">
                         <p class="mb-2 fw-bold" style="max-width: 500px;">
-                            ¿Cómo se llama el área donde el portero puede usar las manos?
+                            ¿Qué tradición cultural española está asociada al enfrentamiento ritual con toros? 
                         </p>
                         <div class="d-flex flex-wrap gap-2">
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;">A) Central</button>
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;">B) Grande</button>
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;">C) Defensa</button>
-                            <button class="btn btn-green flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;">D) Libre</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="false">A) Encierro</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="true">B) Tauromaquia</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="false">C) Flamenco</button>
+                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="false">D) Fallas</button>
                         </div>
                         </div>
                     </li>
@@ -280,12 +289,11 @@
                     <div class="d-inline-flex align-items-center justify-content-center
                                 rounded-circle mb-3"
                         style="width:120px; height:120px; background:#4a4a4a; color:#ffff7c;">
-                        <span style="font-size:2.5rem; font-weight:700;">
-                            2 / 3
+                        <span  id="scoreText" style="font-size:2.5rem; font-weight:700;">
+                            0 / 3
                         </span>
                     </div>
-                    <p class="fs-5 fw-semibold mb-1">¡Buen trabajo!</p>
-                    <p class="text-muted mb-4">Respondiste correctamente 2 de 3 preguntas.</p>
+                    <p id="mensajeResultado" class="fs-5 fw-semibold mb-1"></p>
                 </div>
             </div>
         </div>
@@ -402,6 +410,183 @@
             </div>
         </div>
     </div>
+
+<script type="module">
+    import * as THREE from 'https://esm.sh/three@0.160.0';
+    import { GLTFLoader } from 'https://esm.sh/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
+    import { OrbitControls } from 'https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+
+    let animations = {};
+    let clock = new THREE.Clock();
+    let scene, camera, renderer, mixer, model;
+    let initialized = false;
+
+    function init3D() {
+
+        const container = document.getElementById("modelo3d");
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x3a3a3a);
+
+        camera = new THREE.PerspectiveCamera(45, 350 / 430, 0.1, 1000);
+        camera.position.set(0, 1, 3);
+
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(350, 430);
+        container.appendChild(renderer.domElement);
+        //luces
+        const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.5);
+        scene.add(light);
+    
+
+        const loader = new GLTFLoader();
+
+        loader.load('./models/toro.glb', function (gltf) {
+
+            const model = gltf.scene;        
+            model.scale.set(.5, .5, .5); // prueba cambiar valores
+            model.position.set(0, -0.5, 0);   // ajusta altura
+            scene.add(model);
+
+            mixer = new THREE.AnimationMixer(model);
+            
+            gltf.animations.forEach((clip) => {
+                animations[clip.name] = mixer.clipAction(clip);
+            });
+
+            if (gltf.animations.length > 0) {
+                const action = mixer.clipAction(gltf.animations[0]);
+                action.play();
+            }
+
+            //nombres de aniamciones
+            console.log("Animaciones disponibles:");
+            gltf.animations.forEach((clip) => {
+                console.log(clip.name);
+            });
+
+        });
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+
+        const clock = new THREE.Clock();
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if (mixer) mixer.update(clock.getDelta());
+
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        initialized = true;
+    }
+
+    // 👇 Cuando se abra el modal se carga el modelo
+    const infoModal = document.getElementById('infoModal');
+
+    console.log("Script cargado");
+    infoModal.addEventListener('shown.bs.modal', function () {
+        console.log("Modal abierto");
+        if (!initialized) {
+            init3D();
+        }
+    });
+
+    document.getElementById("activarAnimacion")
+    .addEventListener("click", function () {
+
+        if (!mixer) return;
+
+        // Detener todas las animaciones primero
+        Object.values(animations).forEach(action => action.stop());
+
+        // Reemplaza con el nombre exacto que viste en consola
+        const walkAnimation = animations["Bull_game_rig|Bull_game_rig|Bull_game_walk"];
+
+        if (walkAnimation) {
+            walkAnimation.reset();
+            walkAnimation.play();
+        } else {
+            console.log("No se encontró la animación");
+        }
+
+    });
+
+    document.getElementById("detenerAnimacion")
+    .addEventListener("click", function () {
+
+        if (!mixer) return;
+        // Detener todas las animaciones activas
+        Object.values(animations).forEach(action => {
+            action.stop();
+        });
+
+    });
+</script>
+
+<script>
+    let respuestasUsuario = {};
+    let totalPreguntas = 3;
+
+    // Detectar clic en opciones
+    document.querySelectorAll(".opcion").forEach(boton => {
+
+        boton.addEventListener("click", function() {
+
+            const pregunta = this.dataset.pregunta;
+            const esCorrecta = this.dataset.correcta === "true";
+
+            // Guardar respuesta
+            respuestasUsuario[pregunta] = esCorrecta;
+
+            // Quitar selección previa
+            document.querySelectorAll(`[data-pregunta="${pregunta}"]`)
+            .forEach(btn => btn.classList.remove("btn-success","btn-danger"));
+
+            // Marcar visualmente
+            if (esCorrecta) {
+                this.classList.add("btn-success");
+            } else {
+                this.classList.add("btn-danger");
+            }
+
+        });
+
+    });
+
+    // Calcular resultado cuando se abra el modal resultado
+    document.getElementById("resultadoModal")
+    .addEventListener("show.bs.modal", function() {
+
+        let puntaje = 0;
+
+        for (let i = 1; i <= totalPreguntas; i++) {
+            if (respuestasUsuario[i]) {
+                puntaje++;
+            }
+        }
+
+        document.getElementById("scoreText").textContent = `${puntaje} / ${totalPreguntas}`;
+
+        const mensaje = document.getElementById("mensajeResultado");
+
+        if (puntaje === 3) {
+            mensaje.textContent = "¡Perfecto! Sabes mucho sobre España 🇪🇸";
+        } else if (puntaje === 2) {
+            mensaje.textContent = "¡Muy bien! Buen conocimiento futbolero ⚽";
+        } else if (puntaje === 1) {
+            mensaje.textContent = "Puedes mejorar, intenta de nuevo 💪";
+        } else {
+            mensaje.textContent = "Inténtalo otra vez 😉";
+        }
+
+    });
+</script>
     
 </body>
 </html>
