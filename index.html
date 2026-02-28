@@ -440,8 +440,8 @@
     
 
         const loader = new GLTFLoader();
-
-        loader.load('./models/toro.glb', function (gltf) {
+        //importar modelo 3D
+        loader.load('./models/tucanCol.glb', function (gltf) {
 
             const model = gltf.scene;        
             model.scale.set(.5, .5, .5); // prueba cambiar valores
@@ -505,8 +505,8 @@
         // Detener todas las animaciones primero
         Object.values(animations).forEach(action => action.stop());
 
-        // Reemplaza con el nombre exacto que viste en consola
-        const walkAnimation = animations["Bull_game_rig|Bull_game_rig|Bull_game_walk"];
+        // Reemplzar nombre de animación por el que corresponda a tu modelo
+        const walkAnimation = animations["tucanMove"];
 
         if (walkAnimation) {
             walkAnimation.reset();

@@ -1,0 +1,9 @@
+Mexico - alebrigeMex - cat_rig|cat_rig|Animation
+Uzbequistan - tazaUz - servir
+España - toro - Bull_game_rig|Bull_game_rig|Bull_game_walk
+Uruguay - mateUru - move.001
+Sudafrica - craneoSud - Object_3Action
+Tunez - muebleTun - Object_3Action.003
+Corea - casaKor - Sketchfab_modelAction
+Japon - ramenJapn - ramenMove
+Colombia - tucanCol - tucanMove
