@@ -59,7 +59,14 @@
                 <a-asset-item id="modelo-tunez" src="./models/muebleTun.glb"></a-asset-item>
                 <a-asset-item id="modelo-sudafrica" src="./models/craneoSud.glb"></a-asset-item>
                 <a-asset-item id="modelo-colombia" src="./models/tucanCol.glb"></a-asset-item>
-                <a-asset-item id="modelo-uzbekistan" src="./models/tazaUz.glb"></a-asset-item>
+            <a-asset-item id="modelo-uzbekistan" src="./models/tazaUz.glb"></a-asset-item>
+
+                <!-- Videos -->
+                <video id="video-colombia" src="./videos/Colombia.mp4" preload="auto" webkit-playsinline playsinline crossorigin="anonymous"></video>
+                <video id="video-japon" src="./videos/Japan.mp4" preload="auto" webkit-playsinline playsinline crossorigin="anonymous"></video>
+                <video id="video-corea" src="./videos/Korea.mp4" preload="auto" webkit-playsinline playsinline crossorigin="anonymous"></video>
+                <video id="video-mexico" src="./videos/Mexico.mp4" preload="auto" webkit-playsinline playsinline crossorigin="anonymous"></video>
+                <video id="video-espana" src="./videos/Spain.mp4" preload="auto" webkit-playsinline playsinline crossorigin="anonymous"></video>
             </a-assets>
 
             <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -215,23 +222,30 @@
 
                 <!-- BODY -->
                 <div class="modal-body">
-                    <p class="text-center mt-1">
-                        Se esta reproduciendo un vídeo de la selección que representa la x que scaneaste.
+                    <p class="text-center mt-1" id="video-country-title">
+                        Se está reproduciendo un vídeo de la selección escaneada.
                     </p>
                     <!-- Apartado de video -->
-                    <div class="d-flex justify-content-center my-4">
-                        <div class="bg-dark w-100" style="max-width:500px; height:280px;"></div>
+                    <div class="video-container position-relative d-flex justify-content-center my-4">
+                        <video id="modal-video-player" class="w-100" style="max-width:500px; height:280px; background:#000;" 
+                            autoplay muted loop playsinline webkit-playsinline>
+                            Tu navegador no soporta el elemento video.
+                        </video>
+                        <button id="btn-video-toggle" class="btn btn-lg position-absolute" style="bottom: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; border-radius: 50%; width: 50px; height: 50px;">
+                            <i class="fas fa-pause"></i>
+                        </button>
                     </div>
 
-                    <p class="text-center mt-4">
+                    <p class="text-center mt-3">
                         Selecciona un filtro para aplicar al video
                     </p>
 
-                    <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
-                        <button class="btn btn-green">Desenfoque</button>
-                        <button class="btn btn-green">Pixelado</button>
-                        <button class="btn btn-green">Cámara térmica</button>
-                        <button class="btn btn-green">Ajuste de color</button>
+                    <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
+                        <button class="btn btn-sm btn-green video-filter" data-filter="none">Normal</button>
+                        <button class="btn btn-sm btn-outline-dark video-filter" data-filter="blur">Desenfoque</button>
+                        <button class="btn btn-sm btn-outline-dark video-filter" data-filter="pixelate">Pixelado</button>
+                        <button class="btn btn-sm btn-outline-dark video-filter" data-filter="thermal">Cámara térmica</button>
+                        <button class="btn btn-sm btn-outline-dark video-filter" data-filter="color">Ajuste color</button>
                     </div>
 
                 </div>

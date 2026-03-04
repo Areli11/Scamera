@@ -22,70 +22,80 @@ const Scamera = {
             modelFile: 'tucanCol.glb', 
             animName: 'tucanMove',
             indices: [0],
-            modelIds: ['modelo-ar-colombia']
+            modelIds: ['modelo-ar-colombia'],
+            video: 'Colombia.mp4'
         },
         'japon': { 
             name: 'Japón', 
             modelFile: 'ramenJapn.glb', 
             animName: 'ramenMove',
             indices: [1],
-            modelIds: ['modelo-ar-japon']
+            modelIds: ['modelo-ar-japon'],
+            video: 'Japan.mp4'
         },
         'corea': { 
             name: 'Corea del Sur', 
             modelFile: 'casaKor.glb', 
             animName: 'Sketchfab_modelAction',
             indices: [2],
-            modelIds: ['modelo-ar-corea']
+            modelIds: ['modelo-ar-corea'],
+            video: 'Korea.mp4'
         },
         'mexico': { 
             name: 'México', 
             modelFile: 'alebrijeMex.glb', 
             animName: 'cat_rig',
             indices: [3],
-            modelIds: ['modelo-ar-mexico']
+            modelIds: ['modelo-ar-mexico'],
+            video: 'Mexico.mp4'
         },
         'uruguay': { 
             name: 'Uruguay', 
             modelFile: 'mateUru.glb', 
             animName: 'move.001',
             indices: [4],
-            modelIds: ['modelo-ar-uruguay1']
+            modelIds: ['modelo-ar-uruguay1'],
+            video: null
         },
         'sudafrica': { 
-            name: 'Sudáfrica', 
+            name: 'Sudáfica', 
             modelFile: 'craneoSud.glb', 
             animName: 'Object_3Action',
             indices: [5],
-            modelIds: ['modelo-ar-sudafrica']
+            modelIds: ['modelo-ar-sudafrica'],
+            video: null
         },
         'espana': { 
             name: 'España', 
             modelFile: 'toro.glb', 
             animName: 'Bull_game_walk',
             indices: [6],
-            modelIds: ['modelo-ar-espana']
+            modelIds: ['modelo-ar-espana'],
+            video: 'Spain.mp4'
         },
         'tunez': { 
             name: 'Túnez', 
             modelFile: 'muebleTun.glb', 
             animName: 'Object_3Action.003',
             indices: [7],
-            modelIds: ['modelo-ar-tunez']
+            modelIds: ['modelo-ar-tunez'],
+            video: null
         },
         'uruguay2': { 
             name: 'Uruguay', 
             modelFile: 'mateUru.glb', 
             animName: 'move.001',
             indices: [8],
-            modelIds: ['modelo-ar-uruguay2']
+            modelIds: ['modelo-ar-uruguay2'],
+            video: null
         },
         'uzbekistan': { 
             name: 'Uzbekistán', 
             modelFile: 'tazaUz.glb', 
             animName: 'servir',
             indices: [9],
-            modelIds: ['modelo-ar-uzbekistan']
+            modelIds: ['modelo-ar-uzbekistan'],
+            video: null
         }
     },
 
@@ -351,6 +361,27 @@ const Scamera = {
             infoModal.addEventListener('hidden.bs.modal', () => this.cleanup3DModel());
         }
 
+        // Video modal
+        const videoModal = document.getElementById('videoModal');
+        if (videoModal) {
+            videoModal.addEventListener('shown.bs.modal', () => this.playCurrentVideo());
+            videoModal.addEventListener('hidden.bs.modal', () => this.stopCurrentVideo());
+        }
+
+        // Video controls
+        const btnVideoToggle = document.getElementById('btn-video-toggle');
+        if (btnVideoToggle) {
+            btnVideoToggle.addEventListener('click', () => this.toggleVideo());
+        }
+
+        // Video filters
+        document.querySelectorAll('.video-filter').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const filter = e.target.dataset.filter;
+                this.applyVideoFilter(filter);
+            });
+        });
+
         const triviaModal = document.getElementById('triviaModal');
         if (triviaModal) {
             triviaModal.addEventListener('shown.bs.modal', () => this.loadTrivia());
@@ -380,6 +411,103 @@ const Scamera = {
         if (btnResultado) {
             btnResultado.addEventListener('click', () => this.showTriviaResult());
         }
+    },
+
+    playCurrentVideo() {
+        const config = this.countryConfig[this.currentCountry];
+        if (!config || !config.video) {
+            document.getElementById('video-country-title').textContent = 'No hay video disponible para este país';
+            return;
+        }
+
+        const videoEl = document.getElementById('modal-video-player');
+        if (!videoEl) return;
+
+        videoEl.src = `./videos/${config.video}`;
+        videoEl.muted = true;
+        videoEl.loop = true;
+        
+        const playPromise = videoEl.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log('Video autoplay blocked:', error);
+            }).then(() => {
+                const btn = document.getElementById('btn-video-toggle');
+                if (btn) {
+                    btn.innerHTML = '<i class="fas fa-pause"></i>';
+                }
+            });
+        }
+
+        document.getElementById('video-country-title').textContent = `Reproduciendo: ${config.name}`;
+    },
+
+    pauseCurrentVideo() {
+        const videoEl = document.getElementById('modal-video-player');
+        if (videoEl) {
+            videoEl.pause();
+            const btn = document.getElementById('btn-video-toggle');
+            if (btn) {
+                btn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        }
+    },
+
+    stopCurrentVideo() {
+        const videoEl = document.getElementById('modal-video-player');
+        if (videoEl) {
+            videoEl.pause();
+            videoEl.currentTime = 0;
+            videoEl.src = '';
+        }
+    },
+
+    toggleVideo() {
+        const videoEl = document.getElementById('modal-video-player');
+        const btn = document.getElementById('btn-video-toggle');
+        if (!videoEl || !btn) return;
+
+        if (videoEl.paused) {
+            videoEl.play();
+            btn.innerHTML = '<i class="fas fa-pause"></i>';
+        } else {
+            videoEl.pause();
+            btn.innerHTML = '<i class="fas fa-play"></i>';
+        }
+    },
+
+    applyVideoFilter(filter) {
+        const videoEl = document.getElementById('modal-video-player');
+        if (!videoEl) return;
+
+        videoEl.style.filter = 'none';
+        
+        switch(filter) {
+            case 'blur':
+                videoEl.style.filter = 'blur(2px)';
+                break;
+            case 'pixelate':
+                videoEl.style.filter = 'blur(1px) contrast(150%)';
+                break;
+            case 'thermal':
+                videoEl.style.filter = 'sepia(100%) saturate(300%) contrast(200%) hue-rotate(-30deg)';
+                break;
+            case 'color':
+                videoEl.style.filter = 'saturate(180%) contrast(115%) brightness(105%)';
+                break;
+            default:
+                videoEl.style.filter = 'none';
+        }
+
+        // Update button states
+        document.querySelectorAll('.video-filter').forEach(btn => {
+            btn.classList.remove('btn-green');
+            btn.classList.add('btn-outline-dark');
+            if (btn.dataset.filter === filter) {
+                btn.classList.add('btn-green');
+                btn.classList.remove('btn-outline-dark');
+            }
+        });
     },
 
     loadTrivia() {
