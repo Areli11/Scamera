@@ -75,6 +75,11 @@ body {
     color: #fff;
 }
 
+.btn-green:active {
+    background-color: #2a4519;
+    color: #fff;
+}
+
 .bg-green {
     background-color: #4F7E25;
     color: #fff;
@@ -108,6 +113,178 @@ body {
     transform: translateY(-3px); /* leve levantamiento */
 }
 
+/* AR Scene */
+.scanner-container {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 500px;
+    height: 65vh !important;
+    max-height: 400px;
+    min-height: 280px !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 20px auto !important;
+}
+
+.scanner-container a-scene {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.a-canvas {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+    background: transparent !important;
+}
+
+/* Ocultar overlays de MindAR */
+.mindar-ui-overlay,
+.mindar-ui-loading,
+.mindar-ui-scanning {
+    display: none !important;
+}
+
+/* Scanner Controls */
+.scanner-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.scanner-controls .btn {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.scanner-controls .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Country Info Card */
+.country-info-card {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #4a7c2c 0%, #33551e 100%);
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease;
+}
+
+.country-info-card.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.country-info-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.country-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.country-info-header h4 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.country-info-description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.country-info-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.country-info-buttons .btn {
+    flex: 1;
+    min-width: 70px;
+    max-width: 100px;
+    padding: 10px 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.country-info-buttons .btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* Toast notification */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px);
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 90%;
+}
+
+.toast-notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* Status text */
+#status-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Hidden utility */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     body {
         background-size: 100px;
@@ -122,7 +299,64 @@ body {
             top 60px right -20px,
             bottom -20px left -20px;
     }
+
+    .scanner-container {
+        max-width: 100%;
+        height: 50vh !important;
+        max-height: 300px;
+        min-height: 220px !important;
+        margin: 10px auto !important;
+        border-radius: 12px;
+    }
+
+    .scanner-controls {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    .scanner-controls .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .country-info-card {
+        padding: 15px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .country-info-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .country-info-description {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 2;
+    }
+
+    .country-info-buttons .btn {
+        min-width: 60px;
+        max-width: 80px;
+        padding: 8px 6px;
+        font-size: 0.7rem;
+    }
 }
 
+@media (max-width: 400px) {
+    .scanner-controls {
+        flex-direction: column;
+    }
 
+    .scanner-controls .btn {
+        width: 100%;
+    }
 
+    .country-info-buttons {
+        gap: 6px;
+    }
+
+    .country-info-buttons .btn {
+        min-width: 55px;
+        padding: 6px 4px;
+        font-size: 0.65rem;
+    }
+}

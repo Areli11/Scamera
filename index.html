@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="Images/Scamera_LV.png" />
     <title>Scamera</title>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-image-aframe.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
     <nav class="navbar navbar-light bg-white px-4">
@@ -29,21 +35,129 @@
         </div>
     </nav>
 
-    <h1 class="text-center mt-5 brand-fontB">Bienvenido a Scamera</h1>
-   <!--Apartado de camara -->
-    <div class="d-flex justify-content-center mt-5">
-        <div class="bg-dark w-100" style="max-width:1000px; height:350px;"></div>
-    </div>
-    <div class="d-flex justify-content-center mt-4 flex-wrap gap-2">
-        <button class="btn btn-green">Scanear</button>
-        <button class="btn btn-outline-dark ms-2">Detener scaner</button>
-    </div>
-    <div class="d-flex justify-content-center mt-4 flex-wrap gap-2">
-        <button class="btn btn-green ms-4" data-bs-toggle="modal" data-bs-target="#videoModal">Vídeo</button>
-        <button class="btn btn-green ms-4" data-bs-toggle="modal" data-bs-target="#infoModal">3D + Información</button>
-        <button class="btn btn-green ms-4" data-bs-toggle="modal" data-bs-target="#triviaModal">Trivia</button>
-        <button class="btn btn-green ms-4" data-bs-toggle="modal" data-bs-target="#estadisticasModal">Estadísticas</button>
+    <h1 class="text-center mt-3 brand-fontB">Scamera</h1>
+    <h5 id="status-text" class="text-center">Presiona "Iniciar Escáner" para comenzar</h5>
 
+    <!-- Scanner Container -->
+    <div class="scanner-container">
+        <a-scene id="ar-scene" 
+                mindar-image="imageTargetSrc: ./targets/targets01.mind; autoStart: false; uiScanning: no; uiLoading: no; maxTrack: 1; filterMinCF: 0.0001; filterBeta: 1000;"
+                mindar-image-ui="displayMode: no"
+                color-space="sRGB" 
+                renderer="colorManagement: true, physicallyCorrectLights"
+                device-orientation-permission-ui="enabled: true"
+                vr-mode-ui="enabled: false"
+                embedded>
+            
+            <a-assets>
+                <!-- Modelos 3D -->
+                <a-asset-item id="modelo-mexico" src="./models/alebrijeMex.glb"></a-asset-item>
+                <a-asset-item id="modelo-espana" src="./models/toro.glb"></a-asset-item>
+                <a-asset-item id="modelo-uruguay" src="./models/mateUru.glb"></a-asset-item>
+                <a-asset-item id="modelo-corea" src="./models/casaKor.glb"></a-asset-item>
+                <a-asset-item id="modelo-japon" src="./models/ramenJapn.glb"></a-asset-item>
+                <a-asset-item id="modelo-tunez" src="./models/muebleTun.glb"></a-asset-item>
+                <a-asset-item id="modelo-sudafrica" src="./models/craneoSud.glb"></a-asset-item>
+                <a-asset-item id="modelo-colombia" src="./models/tucanCol.glb"></a-asset-item>
+                <a-asset-item id="modelo-uzbekistan" src="./models/tazaUz.glb"></a-asset-item>
+            </a-assets>
+
+            <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+            <!-- Target: Colombia - Index 0 -->
+            <a-entity id="target-colombia" mindar-image-target="targetIndex: 0">
+                <a-entity id="modelo-ar-colombia" gltf-model="#modelo-colombia" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: Japón - Index 1 -->
+            <a-entity id="target-japon" mindar-image-target="targetIndex: 1">
+                <a-entity id="modelo-ar-japon" gltf-model="#modelo-japon" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: Corea del Sur - Index 2 -->
+            <a-entity id="target-corea" mindar-image-target="targetIndex: 2">
+                <a-entity id="modelo-ar-corea" gltf-model="#modelo-corea" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: México - Index 3 -->
+            <a-entity id="target-mexico" mindar-image-target="targetIndex: 3">
+                <a-entity id="modelo-ar-mexico" gltf-model="#modelo-mexico" visible="false"
+                    position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: Uruguay 1 - Index 4 -->
+            <a-entity id="target-uruguay" mindar-image-target="targetIndex: 4">
+                <a-entity id="modelo-ar-uruguay1" gltf-model="#modelo-uruguay" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: Sudáfrica - Index 5 -->
+            <a-entity id="target-sudafrica" mindar-image-target="targetIndex: 5">
+                <a-entity id="modelo-ar-sudafrica" gltf-model="#modelo-sudafrica" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: España - Index 6 -->
+            <a-entity id="target-espana" mindar-image-target="targetIndex: 6">
+                <a-entity id="modelo-ar-espana" gltf-model="#modelo-espana" visible="false"
+                    position="0 0 0" scale="0.3 0.3 0.3" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: Túnez - Index 7 -->
+            <a-entity id="target-tunez" mindar-image-target="targetIndex: 7">
+                <a-entity id="modelo-ar-tunez" gltf-model="#modelo-tunez" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: Uruguay 2 - Index 8 -->
+            <a-entity id="target-uruguay2" mindar-image-target="targetIndex: 8">
+                <a-entity id="modelo-ar-uruguay2" gltf-model="#modelo-uruguay" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+
+            <!-- Target: Uzbekistán - Index 9 -->
+            <a-entity id="target-uzbekistan" mindar-image-target="targetIndex: 9">
+                <a-entity id="modelo-ar-uzbekistan" gltf-model="#modelo-uzbekistan" visible="false"
+                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
+                    class="modelo-ar"></a-entity>
+            </a-entity>
+        </a-scene>
+    </div>
+
+    <!-- Scanner Controls -->
+    <div class="scanner-controls">
+        <button id="btn-iniciar" class="btn btn-green">Iniciar Escáner</button>
+        <button id="btn-detener" class="btn btn-outline-dark" disabled>Detener Escáner</button>
+    </div>
+
+    <!-- Notificación toast -->
+    <div id="toast-notification" class="toast-notification"></div>
+
+    <!-- Info del país detectado -->
+    <div id="country-info" class="country-info-card hidden">
+        <div class="country-info-header">
+            <h4 id="country-name"></h4>
+            <button id="close-country-info" class="btn-close btn-close-white"></button>
+        </div>
+        <p id="country-description" class="country-info-description"></p>
+        <div class="country-info-buttons">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#videoModal">Vídeo</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#infoModal">3D + Info</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#triviaModal">Trivia</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#estadisticasModal">Estadísticas</button>
+        </div>
     </div>
 
     <!--Modales -->
@@ -57,7 +171,8 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>Scamera es una herramienta innovadora que te permite escanear escudos utilizando la cámara de tu dispositivo. 
+                    <p>Scamera es una herramienta innovadora que te permite escanear escudos utilizando la cámara de tu
+                        dispositivo.
                         Sigue estos sencillos pasos para comenzar:
                     </p>
                     <ul>
@@ -93,10 +208,7 @@
                 <div class="modal-header position-relative">
                     <h5 class="brand-font position-absolute top-10 start-50 translate-middle mb-3">Scamera</h5>
                     <h1 class="brand-fontB ps-3 mt-5 align-self-end">Vídeo</h1>
-                    <button 
-                        type="button" 
-                        class="btn-close ms-auto me-3" 
-                        data-bs-dismiss="modal">
+                    <button type="button" class="btn-close ms-auto me-3" data-bs-dismiss="modal">
                     </button>
 
                 </div>
@@ -136,21 +248,18 @@
                 <!-- HEADER -->
                 <div class="modal-header position-relative">
                     <h5 class="brand-font position-absolute top-10 start-50 translate-middle mb-3">Scamera</h5>
-                    <h1 class="brand-fontB ps-3 mt-5 align-self-end">Conoce más</h1>
-                    <button 
-                        type="button" 
-                        class="btn-close ms-auto me-3" 
-                        data-bs-dismiss="modal">
+                    <h1 id="modal-info-title" class="brand-fontB ps-3 mt-5 align-self-end">Conoce más</h1>
+                    <button type="button" class="btn-close ms-auto me-3" data-bs-dismiss="modal">
                     </button>
                 </div>
 
                 <!-- CONTENEDOR FLEX para modelo + info -->
-                <h3 class="brand-fontB text-start ps-5 pt-4 pb-0 w-100">ESPAÑA</h3>
+                <h3 id="modal-country-name" class="brand-fontB text-start ps-5 pt-4 pb-0 w-100">ESPAÑA</h3>
                 <div class="modal-body d-flex flex-column flex-md-row-reverse gap-4">
 
                     <!-- Modelo 3D y botón -->
                     <div class="d-flex flex-column align-items-center" style="min-width: 350px;">
-                        
+
                         <div id="modelo3d" class="bg-dark me-3" style="width:350px; height:430px;"></div>
                         <p class="text-center mt-4">Modelo 3D</p>
                         <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
@@ -161,21 +270,13 @@
 
                     <!-- Info -->
                     <div class="flex-grow-1">
-                        <h5 class="mb-3 ms-4 me-4 fw-bold">Tradición de las corridas de toro </h5>
-                        <p class="text-start mt-2 ms-4 me-4">
-                            La tauromaquia —el arte de lidiar toros— ha sido una tradición arraigada en España durante siglos y ha influido en su arte, 
-                            literatura y cultura popular. A través de las corridas de toros, el toro de lidia y las plazas tradicionales han sido símbolos
-                            de identidad y ceremonia social, regulados históricamente por normas estéticas y ritualizadas. Aunque esta práctica genera debate en 
-                            la actualidad, su presencia en la cultura ibérica se observa también en el arte y la historia, y está reconocida en la legislación española 
-                            como parte del patrimonio cultural. 
-                        </p> 
-                        <h5 class="mb-3 ms-4 me-4 fw-bold">Fútbol en España </h5>
-                        <p class="text-start mt-2 ms-4 me-4">
-                            La selección española de fútbol —conocida como La Roja— es una de las selecciones más exitosas de Europa y del mundo. 
-                            España ha participado en múltiples Copas del Mundo desde 1934, coronándose campeona del mundo en 2010 y ganando la Eurocopa en 1964, 
-                            2008, 2012 y 2024, consolidando su estilo de juego distintivo basado en posesión y técnica. Además, la selección femenina también ha 
-                            emergido como una potencia global, conquistando el Mundial de 2023 y la UEFA Nations League. Estos logros ilustran la importancia del 
-                            fútbol en la identidad deportiva española y su influencia continua en el fútbol mundial. 
+                        <h5 class="mb-3 ms-4 me-4 fw-bold">Tradición Cultural</h5>
+                        <p id="modal-tradicion" class="text-start mt-2 ms-4 me-4">
+                            La tradición cultural del país seleccionado se mostrará aquí.
+                        </p>
+                        <h5 class="mb-3 ms-4 me-4 fw-bold">Fútbol en el País</h5>
+                        <p id="modal-futbol" class="text-start mt-2 ms-4 me-4">
+                            La información sobre fútbol del país seleccionado se mostrará aquí.
                         </p>
                     </div>
                 </div>
@@ -192,82 +293,19 @@
                 <div class="modal-header position-relative">
                     <h5 class="brand-font position-absolute top-10 start-50 translate-middle mb-3">Scamera</h5>
                     <h1 class="brand-fontB ps-3 mt-5 align-self-end">Trivia</h1>
-                    <button 
-                        type="button" 
-                        class="btn-close ms-auto me-3" 
-                        data-bs-dismiss="modal">
+                    <button type="button" class="btn-close ms-auto me-3" data-bs-dismiss="modal">
                     </button>
                 </div>
 
                 <!-- BODY -->
                 <div class="modal-body">
-                    <ul class="list-unstyled">
-                    <li class="d-flex align-items-stretch mb-3 rounded-3" style="background:#f9f9f4;">
-                        <div class="d-flex justify-content-center align-items-center flex-shrink-0 rounded-start"
-                            style="background:#4a4a4a; color:white; width:100px; font-weight:700; font-size:1.5rem;">
-                            1
-                        </div>
-
-                        <div class="flex-grow-1 px-3 py-2">
-                            <p class="mb-2 fw-bold" style="max-width: 500px;">
-                                ¿En qué año España ganó su primera Copa del Mundo masculina?
-                            </p>
-
-                            <div class="d-flex flex-wrap gap-2">
-                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="false" >A) 2006</button>
-                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="false" >B) 2008</button>
-                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="true" >C) 2010</button>
-                                <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-2" style="min-width: 60px;" data-pregunta="1" data-correcta="false" >D) 2012</button>
-                            </div>
-                        </div>
-                    </li>
-
-
-                    <ul class="list-unstyled">
-                    <li class="d-flex align-items-stretch mb-3 rounded-3" style="background:#f9f9f4;">
-                        <div class="d-flex justify-content-center align-items-center flex-shrink-0 rounded-start"
-                            style="background:#4a4a4a; color:white; width:100px; font-weight:700; font-size:1.5rem;">
-                            2
-                        </div>
-
-                        <div class="flex-grow-1 px-3">
-                        <p class="mb-2 fw-bold" style="max-width: 500px;">
-                            ¿Qué estilo de juego popularizó España durante su época dorada (2008-2012)?
-                        </p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="false">A) Catenaccio</button>
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="true">B) Tiki-taka</button>
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="false">C) Fútbol directo</button>
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 60px;" data-pregunta="2" data-correcta="false">D) Gegenpressing</button>
-                        </div>
-                        </div>
-                    </li>
-
-                   <ul class="list-unstyled">
-                    <li class="d-flex align-items-stretch mb-3 rounded-3" style="background:#f9f9f4;">
-                        <div class="d-flex justify-content-center align-items-center flex-shrink-0 rounded-start"
-                            style="background:#4a4a4a; color:white; width:100px; font-weight:700; font-size:1.5rem;">
-                            3
-                        </div>
-                        <div class="flex-grow-1 px-3">
-                        <p class="mb-2 fw-bold" style="max-width: 500px;">
-                            ¿Qué tradición cultural española está asociada al enfrentamiento ritual con toros? 
-                        </p>
-                        <div class="d-flex flex-wrap gap-2">
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="false">A) Encierro</button>
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="true">B) Tauromaquia</button>
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="false">C) Flamenco</button>
-                            <button class="btn btn-green opcion flex-grow-1 flex-sm-grow-0 mb-3" style="min-width: 80px;" data-pregunta="3" data-correcta="false">D) Fallas</button>
-                        </div>
-                        </div>
-                    </li>
-                    </ul>
-
+                    <div id="trivia-container">
+                        <!-- Las preguntas se generan dinámicamente -->
+                    </div>
+                            
                     <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
-                        <button class="btn btn-green ms-4"
-                                data-bs-dismiss="modal"
-                                data-bs-toggle="modal"
-                                data-bs-target="#resultadoModal">
+                        <button class="btn btn-green ms-4" id="btn-resultado" data-bs-dismiss="modal" data-bs-toggle="modal"
+                            data-bs-target="#resultadoModal">
                             Resultado
                         </button>
                     </div>
@@ -282,14 +320,14 @@
                 <div class="modal-header border-0 justify-content-center position-relative">
                     <h3 class="brand-font fw-bold mb-0">Resultado de la Trivia</h3>
                     <button type="button" class="btn-close position-absolute end-0 me-3"
-                    data-bs-dismiss="modal"></button>
+                        data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body text-center px-4 pb-4">
                     <!-- SCORE -->
                     <div class="d-inline-flex align-items-center justify-content-center
                                 rounded-circle mb-3"
                         style="width:120px; height:120px; background:#4a4a4a; color:#ffff7c;">
-                        <span  id="scoreText" style="font-size:2.5rem; font-weight:700;">
+                        <span id="scoreText" style="font-size:2.5rem; font-weight:700;">
                             0 / 3
                         </span>
                     </div>
@@ -308,18 +346,16 @@
                 <div class="modal-header position-relative">
                     <h5 class="brand-font position-absolute top-10 start-50 translate-middle mb-3">Scamera</h5>
                     <h1 class="brand-fontB ps-3 mt-5 align-self-end">Estadísticas</h1>
-                    <button 
-                        type="button" 
-                        class="btn-close ms-auto me-3" 
-                        data-bs-dismiss="modal">
+                    <button type="button" class="btn-close ms-auto me-3" data-bs-dismiss="modal">
                     </button>
                 </div>
 
                 <!-- BODY -->
                 <div class="container-fluid">
                     <div class="row g-4 justify-content-center">
-                        
-                        <p class="ps-3 mt-5 ms-5">Aquí se mostrarán las estadísticas de partidos del mundial pasado de la selección que scaneate.</p>
+
+                        <p class="ps-3 mt-5 ms-5">Aquí se mostrarán las estadísticas de partidos del mundial pasado de
+                            la selección que scaneate.</p>
                         <div class="col-12 col-md-4 d-flex justify-content-center">
                             <div class="bg-green rounded-4 d-flex flex-column align-items-center mt-1"
                                 style="width:270px; height:230px;">
@@ -406,187 +442,10 @@
                     </div>
                 </div>
 
-                
             </div>
         </div>
     </div>
 
-<script type="module">
-    import * as THREE from 'https://esm.sh/three@0.160.0';
-    import { GLTFLoader } from 'https://esm.sh/three@0.160.0/examples/jsm/loaders/GLTFLoader.js';
-    import { OrbitControls } from 'https://esm.sh/three@0.160.0/examples/jsm/controls/OrbitControls.js';
-
-    let animations = {};
-    let clock = new THREE.Clock();
-    let scene, camera, renderer, mixer, model;
-    let initialized = false;
-
-    function init3D() {
-
-        const container = document.getElementById("modelo3d");
-
-        scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x3a3a3a);
-
-        camera = new THREE.PerspectiveCamera(45, 350 / 430, 0.1, 1000);
-        camera.position.set(0, 1, 3);
-
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(350, 430);
-        container.appendChild(renderer.domElement);
-        //luces
-        const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.5);
-        scene.add(light);
-    
-
-        const loader = new GLTFLoader();
-        //importar modelo 3D
-        loader.load('./models/tucanCol.glb', function (gltf) {
-
-            const model = gltf.scene;        
-            model.scale.set(.5, .5, .5); // prueba cambiar valores
-            model.position.set(0, -0.5, 0);   // ajusta altura
-            scene.add(model);
-
-            mixer = new THREE.AnimationMixer(model);
-            
-            gltf.animations.forEach((clip) => {
-                animations[clip.name] = mixer.clipAction(clip);
-            });
-
-            if (gltf.animations.length > 0) {
-                const action = mixer.clipAction(gltf.animations[0]);
-                action.play();
-            }
-
-            //nombres de aniamciones
-            console.log("Animaciones disponibles:");
-            gltf.animations.forEach((clip) => {
-                console.log(clip.name);
-            });
-
-        });
-
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-
-        const clock = new THREE.Clock();
-
-        function animate() {
-            requestAnimationFrame(animate);
-
-            if (mixer) mixer.update(clock.getDelta());
-
-            controls.update();
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        initialized = true;
-    }
-
-    // 👇 Cuando se abra el modal se carga el modelo
-    const infoModal = document.getElementById('infoModal');
-
-    console.log("Script cargado");
-    infoModal.addEventListener('shown.bs.modal', function () {
-        console.log("Modal abierto");
-        if (!initialized) {
-            init3D();
-        }
-    });
-
-    document.getElementById("activarAnimacion")
-    .addEventListener("click", function () {
-
-        if (!mixer) return;
-
-        // Detener todas las animaciones primero
-        Object.values(animations).forEach(action => action.stop());
-
-        // Reemplzar nombre de animación por el que corresponda a tu modelo
-        const walkAnimation = animations["tucanMove"];
-
-        if (walkAnimation) {
-            walkAnimation.reset();
-            walkAnimation.play();
-        } else {
-            console.log("No se encontró la animación");
-        }
-
-    });
-
-    document.getElementById("detenerAnimacion")
-    .addEventListener("click", function () {
-
-        if (!mixer) return;
-        // Detener todas las animaciones activas
-        Object.values(animations).forEach(action => {
-            action.stop();
-        });
-
-    });
-</script>
-
-<script>
-    let respuestasUsuario = {};
-    let totalPreguntas = 3;
-
-    // Detectar clic en opciones
-    document.querySelectorAll(".opcion").forEach(boton => {
-
-        boton.addEventListener("click", function() {
-
-            const pregunta = this.dataset.pregunta;
-            const esCorrecta = this.dataset.correcta === "true";
-
-            // Guardar respuesta
-            respuestasUsuario[pregunta] = esCorrecta;
-
-            // Quitar selección previa
-            document.querySelectorAll(`[data-pregunta="${pregunta}"]`)
-            .forEach(btn => btn.classList.remove("btn-success","btn-danger"));
-
-            // Marcar visualmente
-            if (esCorrecta) {
-                this.classList.add("btn-success");
-            } else {
-                this.classList.add("btn-danger");
-            }
-
-        });
-
-    });
-
-    // Calcular resultado cuando se abra el modal resultado
-    document.getElementById("resultadoModal")
-    .addEventListener("show.bs.modal", function() {
-
-        let puntaje = 0;
-
-        for (let i = 1; i <= totalPreguntas; i++) {
-            if (respuestasUsuario[i]) {
-                puntaje++;
-            }
-        }
-
-        document.getElementById("scoreText").textContent = `${puntaje} / ${totalPreguntas}`;
-
-        const mensaje = document.getElementById("mensajeResultado");
-
-        if (puntaje === 3) {
-            mensaje.textContent = "¡Perfecto! Sabes mucho sobre España 🇪🇸";
-        } else if (puntaje === 2) {
-            mensaje.textContent = "¡Muy bien! Buen conocimiento futbolero ⚽";
-        } else if (puntaje === 1) {
-            mensaje.textContent = "Puedes mejorar, intenta de nuevo 💪";
-        } else {
-            mensaje.textContent = "Inténtalo otra vez 😉";
-        }
-
-    });
-</script>
-    
 </body>
+
 </html>

@@ -1,0 +1,231 @@
+{
+  "mexico": {
+    "titulo": "Selección de México",
+    "descripcion": "La selección de fútbol de México, conocida como 'El Tricolor', es una de las más reconocidas de CONCACAF. Ha participado en múltiples Copas del Mundo y es famosa por sus vibrante uniforme verde.",
+    "modelo": "alebrijeMex.glb",
+    "animacion": "cat_rig",
+    "tradicion": "Los alebrijes son artesanías mexicanas originarias de Oaxaca, representando colores brillantes y figuras fantásticas.",
+    "futbol": "México ha sido sede del Mundial en dos ocasiones (1970 y 1986) y ha alcanzado los cuartos de final en ambas."
+  },
+  "espana": {
+    "titulo": "Selección de España",
+    "descripcion": "La selección española, llamada 'La Roja', es inmueble en la historia del fútbol mundial. Ganó su primer Mundial en 2010.",
+    "modelo": "toro.glb",
+    "animacion": "Bull_game_walk",
+    "tradicion": "La tauromaquia es una tradición española centenaria. El toro de lidia es símbolo de identidad cultural española.",
+    "futbol": "España ganó la Eurocopa en 1964, 2008, 2012 y el Mundial de 2010 con su icónico estilo 'tiki-taka'."
+  },
+  "uruguay": {
+    "titulo": "Selección de Uruguay",
+    "descripcion": "Uruguay, 'La Celeste', es la selección más vieja en ganar un Mundial (1930). Cuenta con 2 títulos de Copa del Mundo.",
+    "modelo": "mateUru.glb",
+    "animacion": "move.001",
+    "tradicion": "El mate es una infusión tradicional sudamericana, símbolo de hospitalidad y compartir en Uruguay y Argentina.",
+    "futbol": "Uruguay ganó los mundiales de 1930 y 1950, siendo el primer campeón del mundo."
+  },
+  "corea": {
+    "titulo": "Selección de Corea del Sur",
+    "descripcion": "Corea del Sur, 'Los Taeguk Warriors', fue la primera selección asiática en llegar a semifinal de un Mundial (2002).",
+    "modelo": "casaKor.glb",
+    "animacion": "Sketchfab_modelAction",
+    "tradicion": "La casa tradicional coreana (Hanok) representa la arquitectura vernácula con techo curvado y materiales naturales.",
+    "futbol": "Corea del Sur albergó el Mundial 2002 junto a Japón y alcanzó el 4to lugar."
+  },
+  "japon": {
+    "titulo": "Selección de Japón",
+    "descripcion": "Japón, 'Samurai Blue', es una de las potencias asiáticas con 4 títulos de Copa Asiática.",
+    "modelo": "ramenJapn.glb",
+    "animacion": "ramenMove",
+    "tradicion": "El ramen es un plato japonés icónico con fideos en caldo, originario de China pero adaptado en Japón.",
+    "futbol": "Japón fue sede del Mundial 2002 y es conocido por su disciplina y juego colectivo."
+  },
+  "tunez": {
+    "titulo": "Selección de Túnez",
+    "descripcion": "Túnez, 'Los Águilas de Cartago', es una selección africana competitiva con多次 participaciones mundialistas.",
+    "modelo": "muebleTun.glb",
+    "animacion": "Object_3Action.003",
+    "tradicion": "Los muebles tradicionales tunecinos reflejan la artesanía bereber con diseños geométricos y colores vibrantes.",
+    "futbol": "Túnez ha participado en 6 mundiales y fue la primera selección africana en ganar un partido en mundiales."
+  },
+  "sudafrica": {
+    "titulo": "Selección de Sudáfrica",
+    "descripcion": "Sudáfrica, 'Bafana Bafana', fue sede del Mundial 2010, siendo el primer país africano en organizar el torneo.",
+    "modelo": "craneoSud.glb",
+    "animacion": "Object_3Action",
+    "tradicion": "Los cráneos decorados representan la rica herencia artística y espiritual de las culturas sudafricanas.",
+    "futbol": "Sudáfrica fue sede del Mundial 2010 y ha produzido jugadores emblemáticos como Benni McCarthy."
+  },
+  "colombia": {
+    "titulo": "Selección de Colombia",
+    "descripción": "Colombia, 'Los Cafeteros', es conocida por su talento ofensivo y ha participado en 6 mundiales.",
+    "modelo": "tucanCol.glb",
+    "animacion": "tucanMove",
+    "tradicion": "El tucán es un ave emblemática de Colombia, símbolo de la biodiversidad tropical del país.",
+    "futbol": "Colombia alcanzó cuartos de final en el Mundial de 2014, su mejor participación histórica."
+  },
+  "uzbekistan": {
+    "titulo": "Selección de Uzbekistán",
+    "descripcion": "Uzbekistán, 'Los Lobos Blancos', es la selección centroasiática más exitosa en la Copa Asiática.",
+    "modelo": "tazaUz.glb",
+    "animacion": "servir",
+    "tradicion": "El té uzbeco (choy) es una bebida tradicional fundamental en la hospitalidad centrasiática.",
+    "futbol": "Uzbekistán alcanzó las semifinales de la Copa Asiática 2011, su mejor resultado."
+  },
+  "trivia": {
+    "mexico": [
+      {
+        "pregunta": "¿En qué años México fue sede del Mundial?",
+        "opciones": [
+          {"texto": "1970 y 1986", "correcta": true},
+          {"texto": "1994 y 1998", "correcta": false},
+          {"texto": "2002 y 2006", "correcta": false},
+          {"texto": "1982 y 1990", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el apodo de la selección mexicana?",
+        "opciones": [
+          {"texto": "El Tricolor", "correcta": true},
+          {"texto": "Los Aztecas", "correcta": false},
+          {"texto": "Los Charros", "correcta": false},
+          {"texto": "Los Vaqueros", "correcta": false}
+        ]
+      }
+    ],
+    "espana": [
+      {
+        "pregunta": "¿En qué año España ganó su primer Mundial?",
+        "opciones": [
+          {"texto": "2010", "correcta": true},
+          {"texto": "2008", "correcta": false},
+          {"texto": "2012", "correcta": false},
+          {"texto": "2006", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Qué estilo de juego popularizó España?",
+        "opciones": [
+          {"texto": "Tiki-taka", "correcta": true},
+          {"texto": "Catenaccio", "correcta": false},
+          {"texto": "Gegenpressing", "correcta": false},
+          {"texto": "Fútbol directo", "correcta": false}
+        ]
+      }
+    ],
+    "uruguay": [
+      {
+        "pregunta": "¿Cuántos mundiales ha ganado Uruguay?",
+        "opciones": [
+          {"texto": "2", "correcta": true},
+          {"texto": "1", "correcta": false},
+          {"texto": "3", "correcta": false},
+          {"texto": "4", "correcta": false}
+        ]
+      }
+    ],
+    "corea": [
+      {
+        "pregunta": "¿En qué año Corea llegó a semifinal del Mundial?",
+        "opciones": [
+          {"texto": "2002", "correcta": true},
+          {"texto": "2010", "correcta": false},
+          {"texto": "2006", "correcta": false},
+          {"texto": "1998", "correcta": false}
+        ]
+      }
+    ],
+    "japon": [
+      {
+        "pregunta": "¿Cuántas Copas Asiáticas ha ganado Japón?",
+        "opciones": [
+          {"texto": "4", "correcta": true},
+          {"texto": "3", "correcta": false},
+          {"texto": "5", "correcta": false},
+          {"texto": "2", "correcta": false}
+        ]
+      }
+    ],
+    "tunez": [
+      {
+        "pregunta": "¿En qué año Túnez ganó su primera Copa Africana?",
+        "opciones": [
+          {"texto": "2004", "correcta": true},
+          {"texto": "1996", "correcta": false},
+          {"texto": "2000", "correcta": false},
+          {"texto": "2008", "correcta": false}
+        ]
+      }
+    ],
+    "sudafrica": [
+      {
+        "pregunta": "¿En qué año Sudáfrica fue sede del Mundial?",
+        "opciones": [
+          {"texto": "2010", "correcta": true},
+          {"texto": "2006", "correcta": false},
+          {"texto": "2014", "correcta": false},
+          {"texto": "2002", "correcta": false}
+        ]
+      }
+    ],
+    "colombia": [
+      {
+        "pregunta": "¿En qué año Colombia alcanzó cuartos de final?",
+        "opciones": [
+          {"texto": "2014", "correcta": true},
+          {"texto": "1990", "correcta": false},
+          {"texto": "2018", "correcta": false},
+          {"texto": "2022", "correcta": false}
+        ]
+      }
+    ],
+    "uzbekistan": [
+      {
+        "pregunta": "¿Cuál es el apodo de Uzbekistán?",
+        "opciones": [
+          {"texto": "White Wolves", "correcta": true},
+          {"texto": "Desert Eagles", "correcta": false},
+          {"texto": "Sky Blues", "correcta": false},
+          {"texto": "Central Stars", "correcta": false}
+        ]
+      }
+    ]
+  },
+  "estadisticas": {
+    "mexico": {
+      "partidos": [
+        {"equipoA": "México", "equipoB": "Polonia", "golesA": 0, "golesB": 0, "tiempo": "90:00"},
+        {"equipoA": "México", "equipoB": "Argentina", "golesA": 0, "golesB": 2, "tiempo": "90:00"},
+        {"equipoA": "México", "equipoB": "Arabia Saudí", "golesA": 1, "golesB": 2, "tiempo": "90:00"}
+      ],
+      "tirosPuerta": {"local": 15, "rival": 12},
+      "faltas": {"local": 25, "rival": 18},
+      "tarjetas": {"amarillas": {"local": 4, "rival": 6}, "rojas": {"local": 0, "rival": 1}},
+      "saquesEsquina": {"local": 12, "rival": 8},
+      "cambios": {"local": "3/5", "rival": "4/5"}
+    },
+    "espana": {
+      "partidos": [
+        {"equipoA": "España", "equipoB": "Costa Rica", "golesA": 7, "golesB": 0, "tiempo": "90:00"},
+        {"equipoA": "España", "equipoB": "Alemania", "golesA": 1, "golesB": 1, "tiempo": "90:00"},
+        {"equipoA": "España", "equipoB": "Japón", "golesA": 1, "golesB": 2, "tiempo": "90:00"}
+      ],
+      "tirosPuerta": {"local": 22, "rival": 10},
+      "faltas": {"local": 12, "rival": 15},
+      "tarjetas": {"amarillas": {"local": 2, "rival": 4}, "rojas": {"local": 0, "rival": 0}},
+      "saquesEsquina": {"local": 18, "rival": 5},
+      "cambios": {"local": "5/5", "rival": "3/5"}
+    },
+    "uruguay": {
+      "partidos": [
+        {"equipoA": "Uruguay", "equipoB": "Corea", "golesA": 0, "golesB": 0, "tiempo": "90:00"},
+        {"equipoA": "Uruguay", "equipoB": "Portugal", "golesA": 0, "golesB": 2, "tiempo": "90:00"},
+        {"equipoA": "Uruguay", "equipoB": "Ghana", "golesA": 2, "golesB": 0, "tiempo": "90:00"}
+      ],
+      "tirosPuerta": {"local": 14, "rival": 11},
+      "faltas": {"local": 20, "rival": 16},
+      "tarjetas": {"amarillas": {"local": 3, "rival": 2}, "rojas": {"local": 0, "rival": 0}},
+      "saquesEsquina": {"local": 9, "rival": 7},
+      "cambios": {"local": "4/5", "rival": "3/5"}
+    }
+  }
+}
