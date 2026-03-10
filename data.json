@@ -191,18 +191,6 @@
     ]
   },
   "estadisticas": {
-    "mexico": {
-      "partidos": [
-        {"equipoA": "México", "equipoB": "Polonia", "golesA": 0, "golesB": 0, "tiempo": "90:00"},
-        {"equipoA": "México", "equipoB": "Argentina", "golesA": 0, "golesB": 2, "tiempo": "90:00"},
-        {"equipoA": "México", "equipoB": "Arabia Saudí", "golesA": 1, "golesB": 2, "tiempo": "90:00"}
-      ],
-      "tirosPuerta": {"local": 15, "rival": 12},
-      "faltas": {"local": 25, "rival": 18},
-      "tarjetas": {"amarillas": {"local": 4, "rival": 6}, "rojas": {"local": 0, "rival": 1}},
-      "saquesEsquina": {"local": 12, "rival": 8},
-      "cambios": {"local": "3/5", "rival": "4/5"}
-    },
     "espana":{
       "partidos": [
         {"jugadorA": "David Villa", "golesA": "59 goles", "jugadorB": "Raúl González", "golesB": "44 goles", "topAp": "Sergio Ramos"},
@@ -215,17 +203,102 @@
       "victoria": {"marcador": "13-0", "year": "1933"},
       "mundialData": {"data": "Eliminatorias mundialistas", "partidos": "49"}
     },
-    "uruguay": {
-      "partidos": [
-        {"equipoA": "Uruguay", "equipoB": "Corea", "golesA": 0, "golesB": 0, "tiempo": "90:00"},
-        {"equipoA": "Uruguay", "equipoB": "Portugal", "golesA": 0, "golesB": 2, "tiempo": "90:00"},
-        {"equipoA": "Uruguay", "equipoB": "Ghana", "golesA": 2, "golesB": 0, "tiempo": "90:00"}
+    "uzbekistan":{
+      "partidos":[
+        {"jugadorA":"Maksim Shatskikh","golesA":"38 goles","jugadorB":"Eldor Shomurodov","golesB":"36 goles","topAp":"Server Djeparov"},
+        {"equipoA":"Uzbekistan","equipoB":"Irán","golesA":0,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Uzbekistan","equipoB":"Qatar","golesA":2,"golesB":0,"tiempo":"90:00"}
       ],
-      "tirosPuerta": {"local": 14, "rival": 11},
-      "faltas": {"local": 20, "rival": 16},
-      "tarjetas": {"amarillas": {"local": 3, "rival": 2}, "rojas": {"local": 0, "rival": 0}},
-      "saquesEsquina": {"local": 9, "rival": 7},
-      "cambios": {"local": "4/5", "rival": "3/5"}
+      "variasAp":{"apA":"Server Djeparov","apB":"Odil Ahmedov"},
+      "titulo":{"uno":"Juegos Asiáticos","dos":"Copa CAFA"},
+      "racha":{"victorias":{"local":"8","rival":"."},"year":{"local":"2023-2024","rival":"."}},
+      "victoria":{"marcador":"15-0","year":"1998"},
+      "mundialData":{"data":"Eliminatorias mundialistas","partidos":"60"}
+    },
+    "sudafrica":{
+      "partidos":[
+        {"jugadorA":"Benedict McCarthy","golesA":"31 goles","jugadorB":"Shaun Bartlett","golesB":"29 goles","topAp":"Aaron Mokoena"},
+        {"equipoA":"Sudáfrica","equipoB":"México","golesA":1,"golesB":1,"tiempo":"90:00"},
+        {"equipoA":"Sudáfrica","equipoB":"Francia","golesA":2,"golesB":1,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Aaron Mokoena","apB":"Itumeleng Khune"},
+      "titulo":{"uno":"Copa Africana de Naciones","dos":"Copa COSAFA"},
+      "racha":{"victorias":{"local":"6","rival":"."},"year":{"local":"1996","rival":"."}},
+      "victoria":{"marcador":"6-0","year":"2015"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"10"}
+    },
+    "colombia":{
+      "partidos":[
+        {"jugadorA":"Radamel Falcao","golesA":"36 goles","jugadorB":"James Rodríguez","golesB":"28 goles","topAp":"Carlos Valderrama"},
+        {"equipoA":"Colombia","equipoB":"Alemania","golesA":2,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Colombia","equipoB":"Brasil","golesA":1,"golesB":2,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"David Ospina","apB":"Carlos Valderrama"},
+      "titulo":{"uno":"Copa América","dos":"Copa Kirin"},
+      "racha":{"victorias":{"local":"10","rival":"."},"year":{"local":"1993-1994","rival":"."}},
+      "victoria":{"marcador":"5-0","year":"1993"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"22"}
+    },
+    "corea":{
+      "partidos":[
+        {"jugadorA":"Cha Bum-kun","golesA":"58 goles","jugadorB":"Hwang Sun-hong","golesB":"50 goles","topAp":"Hong Myung-bo"},
+        {"equipoA":"Corea del Sur","equipoB":"Portugal","golesA":2,"golesB":1,"tiempo":"90:00"},
+        {"equipoA":"Corea del Sur","equipoB":"Alemania","golesA":2,"golesB":0,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Hong Myung-bo","apB":"Son Heung-min"},
+      "titulo":{"uno":"Copa Asiática","dos":"Juegos Asiáticos"},
+      "racha":{"victorias":{"local":"9","rival":"."},"year":{"local":"2002","rival":"."}},
+      "victoria":{"marcador":"16-0","year":"2003"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"38"}
+    },
+    "uruguay":{
+      "partidos":[
+        {"jugadorA":"Luis Suárez","golesA":"68 goles","jugadorB":"Edinson Cavani","golesB":"58 goles","topAp":"Diego Godín"},
+        {"equipoA":"Uruguay","equipoB":"Brasil","golesA":2,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Uruguay","equipoB":"Argentina","golesA":0,"golesB":1,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Diego Godín","apB":"Luis Suárez"},
+      "titulo":{"uno":"Copa Mundial FIFA","dos":"Copa América"},
+      "racha":{"victorias":{"local":"12","rival":"."},"year":{"local":"1924-1930","rival":"."}},
+      "victoria":{"marcador":"9-0","year":"1927"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"59"}
+    },
+    "tunez":{
+      "partidos":[
+        {"jugadorA":"Issam Jemaa","golesA":"36 goles","jugadorB":"Wahbi Khazri","golesB":"25 goles","topAp":"Radhi Jaidi"},
+        {"equipoA":"Túnez","equipoB":"Francia","golesA":1,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Túnez","equipoB":"Dinamarca","golesA":0,"golesB":0,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Radhi Jaidi","apB":"Youssef Msakni"},
+      "titulo":{"uno":"Copa Africana de Naciones","dos":"Copa Árabe"},
+      "racha":{"victorias":{"local":"7","rival":"."},"year":{"local":"2004","rival":"."}},
+      "victoria":{"marcador":"8-1","year":"1960"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"18"}
+    },
+    "japon":{
+      "partidos":[
+        {"jugadorA":"Kunishige Kamamoto","golesA":"75 goles","jugadorB":"Shinji Okazaki","golesB":"50 goles","topAp":"Yasuhito Endo"},
+        {"equipoA":"Japón","equipoB":"Alemania","golesA":2,"golesB":1,"tiempo":"90:00"},
+        {"equipoA":"Japón","equipoB":"España","golesA":2,"golesB":1,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Yasuhito Endo","apB":"Yuto Nagatomo"},
+      "titulo":{"uno":"Copa Asiática","dos":"Copa Kirin"},
+      "racha":{"victorias":{"local":"11","rival":"."},"year":{"local":"2018-2019","rival":"."}},
+      "victoria":{"marcador":"15-0","year":"1967"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"24"}
+    },
+    "mexico":{
+      "partidos":[
+        {"jugadorA":"Javier Hernández","golesA":"52 goles","jugadorB":"Jared Borgetti","golesB":"46 goles","topAp":"Claudio Suárez"},
+        {"equipoA":"México","equipoB":"Alemania","golesA":1,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"México","equipoB":"Argentina","golesA":0,"golesB":2,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Claudio Suárez","apB":"Andrés Guardado"},
+      "titulo":{"uno":"Copa Oro","dos":"Copa Confederaciones"},
+      "racha":{"victorias":{"local":"12","rival":"."},"year":{"local":"1993-1997","rival":"."}},
+      "victoria":{"marcador":"13-0","year":"1967"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"60"}
     }
   }
 }
+

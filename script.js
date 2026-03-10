@@ -502,7 +502,7 @@ const Scamera = {
                 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
                     <div class="bg-green rounded-4 d-flex flex-column align-items-center mt-1" style="width:270px; height:230px;">
-                        <p class="mt-2 fw-bold">Máximo goleador</p>
+                        <p class="text-center mt-2 fw-bold fs-4">Máximo goleador</p>
                         ${s.partidos.slice(0, 1).map(p => `
                             <div class="fs-4 my-2 fw-bold" >${p.jugadorA}</div>
                             <div class="fs-4 my-2 fw-bold" >${p.golesA}</div>
@@ -527,7 +527,7 @@ const Scamera = {
                 </div>
 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:300px;">
+                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:280px;">
                         <p class="mt-2 green-font fs-4">Muchas apariciones</p>
                         <p class="fs-4 fw-bold my-4"> ${s.variasAp.apA}</p>
                         <p class="fs-4 fw-bold my-4"> ${s.variasAp.apB}</p>
@@ -535,7 +535,7 @@ const Scamera = {
                 </div>
 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:300px;">
+                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:280px;">
                         <p class="mt-2 green-font fs-4">Títulos importantes</p>
                         <p class="fs-4 fw-bold my-4">${s.titulo.uno}</p>
                         <p class="fs-4 fw-bold my-4">${s.titulo.dos}</p>
@@ -543,7 +543,7 @@ const Scamera = {
                 </div>
 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:260px; height:330px;">
+                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:260px; height:280px;">
                         <p class="mt-2 green-font fs-5">Rachas consecutivas</p>
                         <div class="bg-green rounded-5 px-3 py-1 mt-1 text-white">Victorias</div>
                         <p class="fs-4 fw-bold my-2">${s.racha.victorias.local}</p>
@@ -564,7 +564,7 @@ const Scamera = {
                 <div class="col-12 col-md-4 d-flex justify-content-center">
                     <div class="bg-light rounded-4 d-flex flex-column align-items-center mb-4" style="width:270px; height:200px;">
                         <p class="mt-2 green-font fs-5">Clasificación mundial</p>
-                        <p class="fs-5 fw-bold my-2 text-center">Tipo: ${s.mundialData.data}</p>
+                        <p class="fs-5 fw-bold my-2 text-center">${s.mundialData.data}</p>
                         <p class="fs-5 fw-bold my-2">Partidos: ${s.mundialData.partidos}</p>
                     </div>
                 </div>
