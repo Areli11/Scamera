@@ -626,7 +626,7 @@ const Scamera = {
         this.scene.background = new THREE.Color(0x3a3a3a);
 
         this.camera = new THREE.PerspectiveCamera(45, 350 / 430, 0.1, 1000);
-        this.camera.position.set(0, -1, 3);
+        this.camera.position.set(0, -0.5, 5);
 
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
         this.renderer.setSize(350, 430);
