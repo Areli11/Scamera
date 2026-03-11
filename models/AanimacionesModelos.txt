@@ -5,5 +5,5 @@ Uruguay - mateUru - move.001
 Sudafrica - craneoSud - Object_3Action
 Tunez - muebleTun - Object_3Action.003
 Corea - casaKor - Sketchfab_modelAction
-Japon - ramenJapn - ramenMove
+Japon - ramenJapn - animation animation.001_Object_69
 Colombia - tucanCol - tucanMove

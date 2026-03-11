@@ -28,7 +28,7 @@ const Scamera = {
         'japon': { 
             name: 'Japón', 
             modelFile: 'ramenJapn.glb', 
-            animName: 'ramenMove',
+            animName: 'animation',
             indices: [1],
             modelIds: ['modelo-ar-japon'],
             video: 'Japan.mp4'
@@ -44,7 +44,7 @@ const Scamera = {
         'mexico': { 
             name: 'México', 
             modelFile: 'alebrijeMex.glb', 
-            animName: 'cat_rig',
+            animName: 'cat_rig|cat_rig|Animation',
             indices: [3],
             modelIds: ['modelo-ar-mexico'],
             video: 'Mexico.mp4'
@@ -68,7 +68,7 @@ const Scamera = {
         'espana': { 
             name: 'España', 
             modelFile: 'toro.glb', 
-            animName: 'Bull_game_walk',
+            animName: 'Bull_game_rig|Bull_game_rig|Bull_game_walk',
             indices: [6],
             modelIds: ['modelo-ar-espana'],
             video: 'Spain.mp4'
@@ -231,9 +231,27 @@ const Scamera = {
 
         config.modelIds.forEach(modelId => {
             const modelElement = document.getElementById(modelId);
-            if (modelElement) {
-                modelElement.setAttribute('visible', 'true');
-                console.log(`✅ Modelo ${modelId} mostrado para ${country}`);
+                if (modelElement) {
+                    modelElement.setAttribute('visible', 'true');
+                    console.log(`✅ Modelo ${modelId} mostrado para ${country}`);
+                    const startAnimation = () => {
+                    modelElement.removeAttribute('animation-mixer');
+
+                        modelElement.setAttribute(
+                            'animation-mixer',
+                            `clip: ${config.animName}; loop: repeat`
+                        );
+
+                        console.log(`🎬 Animación ${config.animName} activada`);
+                    };
+
+                    // Si el modelo ya está cargado
+                if (modelElement.getObject3D('mesh')) {
+                    startAnimation();
+                }// Si aún no ha cargado
+                else {
+                    modelElement.addEventListener('model-loaded', startAnimation, { once: true });
+                }
             } else {
                 console.error(`❌ No se encontró elemento: ${modelId}`);
             }
@@ -630,7 +648,7 @@ const Scamera = {
                 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
                     <div class="bg-green rounded-4 d-flex flex-column align-items-center mt-1" style="width:270px; height:230px;">
-                        <p class="mt-2 fw-bold">Máximo goleador</p>
+                        <p class="text-center mt-2 fw-bold fs-4">Máximo goleador</p>
                         ${s.partidos.slice(0, 1).map(p => `
                             <div class="fs-4 my-2 fw-bold" >${p.jugadorA}</div>
                             <div class="fs-4 my-2 fw-bold" >${p.golesA}</div>
@@ -655,7 +673,7 @@ const Scamera = {
                 </div>
 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:300px;">
+                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:280px;">
                         <p class="mt-2 green-font fs-4">Muchas apariciones</p>
                         <p class="fs-4 fw-bold my-4"> ${s.variasAp.apA}</p>
                         <p class="fs-4 fw-bold my-4"> ${s.variasAp.apB}</p>
@@ -663,7 +681,7 @@ const Scamera = {
                 </div>
 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:300px;">
+                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:270px; height:280px;">
                         <p class="mt-2 green-font fs-4">Títulos importantes</p>
                         <p class="fs-4 fw-bold my-4">${s.titulo.uno}</p>
                         <p class="fs-4 fw-bold my-4">${s.titulo.dos}</p>
@@ -671,7 +689,7 @@ const Scamera = {
                 </div>
 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:260px; height:330px;">
+                    <div class="bg-light rounded-4 d-flex flex-column align-items-center" style="width:260px; height:280px;">
                         <p class="mt-2 green-font fs-5">Rachas consecutivas</p>
                         <div class="bg-green rounded-5 px-3 py-1 mt-1 text-white">Victorias</div>
                         <p class="fs-4 fw-bold my-2">${s.racha.victorias.local}</p>
@@ -692,7 +710,7 @@ const Scamera = {
                 <div class="col-12 col-md-4 d-flex justify-content-center">
                     <div class="bg-light rounded-4 d-flex flex-column align-items-center mb-4" style="width:270px; height:200px;">
                         <p class="mt-2 green-font fs-5">Clasificación mundial</p>
-                        <p class="fs-5 fw-bold my-2 text-center">Tipo: ${s.mundialData.data}</p>
+                        <p class="fs-5 fw-bold my-2 text-center">${s.mundialData.data}</p>
                         <p class="fs-5 fw-bold my-2">Partidos: ${s.mundialData.partidos}</p>
                     </div>
                 </div>
@@ -736,7 +754,7 @@ const Scamera = {
         this.scene.background = new THREE.Color(0x3a3a3a);
 
         this.camera = new THREE.PerspectiveCamera(45, 350 / 430, 0.1, 1000);
-        this.camera.position.set(0, 1, 3);
+        this.camera.position.set(0, -0.5, 5);
 
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
         this.renderer.setSize(350, 430);
