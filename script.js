@@ -27,7 +27,7 @@ const Scamera = {
         'japon': { 
             name: 'Japón', 
             modelFile: 'ramenJapn.glb', 
-            animName: 'ramenMove',
+            animName: 'animation',
             indices: [1],
             modelIds: ['modelo-ar-japon']
         },
@@ -41,7 +41,7 @@ const Scamera = {
         'mexico': { 
             name: 'México', 
             modelFile: 'alebrijeMex.glb', 
-            animName: 'cat_rig',
+            animName: 'cat_rig|cat_rig|Animation',
             indices: [3],
             modelIds: ['modelo-ar-mexico']
         },
@@ -62,7 +62,7 @@ const Scamera = {
         'espana': { 
             name: 'España', 
             modelFile: 'toro.glb', 
-            animName: 'Bull_game_walk',
+            animName: 'Bull_game_rig|Bull_game_rig|Bull_game_walk',
             indices: [6],
             modelIds: ['modelo-ar-espana']
         },
@@ -221,9 +221,27 @@ const Scamera = {
 
         config.modelIds.forEach(modelId => {
             const modelElement = document.getElementById(modelId);
-            if (modelElement) {
-                modelElement.setAttribute('visible', 'true');
-                console.log(`✅ Modelo ${modelId} mostrado para ${country}`);
+                if (modelElement) {
+                    modelElement.setAttribute('visible', 'true');
+                    console.log(`✅ Modelo ${modelId} mostrado para ${country}`);
+                    const startAnimation = () => {
+                    modelElement.removeAttribute('animation-mixer');
+
+                        modelElement.setAttribute(
+                            'animation-mixer',
+                            `clip: ${config.animName}; loop: repeat`
+                        );
+
+                        console.log(`🎬 Animación ${config.animName} activada`);
+                    };
+
+                    // Si el modelo ya está cargado
+                if (modelElement.getObject3D('mesh')) {
+                    startAnimation();
+                }// Si aún no ha cargado
+                else {
+                    modelElement.addEventListener('model-loaded', startAnimation, { once: true });
+                }
             } else {
                 console.error(`❌ No se encontró elemento: ${modelId}`);
             }
@@ -608,7 +626,7 @@ const Scamera = {
         this.scene.background = new THREE.Color(0x3a3a3a);
 
         this.camera = new THREE.PerspectiveCamera(45, 350 / 430, 0.1, 1000);
-        this.camera.position.set(0, 1, 3);
+        this.camera.position.set(0, -1, 3);
 
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
         this.renderer.setSize(350, 430);
