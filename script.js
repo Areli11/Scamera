@@ -21,80 +21,72 @@ const Scamera = {
             name: 'Colombia', 
             modelFile: 'tucanCol.glb', 
             animName: 'tucanMove',
-            indices: [0],
-            modelIds: ['modelo-ar-colombia'],
+            indices: [0, 1, 2],
+            modelIds: ['modelo-ar-colombia-0', 'modelo-ar-colombia-1', 'modelo-ar-colombia-2'],
             video: 'Colombia.mp4'
         },
         'japon': { 
             name: 'Japón', 
             modelFile: 'ramenJapn.glb', 
             animName: 'animation',
-            indices: [1],
-            modelIds: ['modelo-ar-japon'],
+            indices: [3, 4, 5, 6],
+            modelIds: ['modelo-ar-japon-0', 'modelo-ar-japon-1', 'modelo-ar-japon-2', 'modelo-ar-japon-3'],
             video: 'Japan.mp4'
         },
         'corea': { 
             name: 'Corea del Sur', 
             modelFile: 'casaKor.glb', 
             animName: 'Sketchfab_modelAction',
-            indices: [2],
-            modelIds: ['modelo-ar-corea'],
+            indices: [7, 8],
+            modelIds: ['modelo-ar-corea-0', 'modelo-ar-corea-1'],
             video: 'Korea.mp4'
         },
         'mexico': { 
             name: 'México', 
             modelFile: 'alebrijeMex.glb', 
             animName: 'cat_rig|cat_rig|Animation',
-            indices: [3],
-            modelIds: ['modelo-ar-mexico'],
+            indices: [9, 10, 11, 12, 13],
+            modelIds: ['modelo-ar-mexico-0', 'modelo-ar-mexico-1', 'modelo-ar-mexico-2', 'modelo-ar-mexico-3', 'modelo-ar-mexico-4'],
             video: 'Mexico.mp4'
-        },
-        'uruguay': { 
-            name: 'Uruguay', 
-            modelFile: 'mateUru.glb', 
-            animName: 'move.001',
-            indices: [4],
-            modelIds: ['modelo-ar-uruguay1'],
-            video: null
         },
         'sudafrica': { 
             name: 'Sudáfica', 
             modelFile: 'craneoSud.glb', 
             animName: 'Object_3Action',
-            indices: [5],
-            modelIds: ['modelo-ar-sudafrica'],
+            indices: [14, 15],
+            modelIds: ['modelo-ar-sudafrica-0', 'modelo-ar-sudafrica-1'],
             video: null
         },
         'espana': { 
             name: 'España', 
             modelFile: 'toro.glb', 
             animName: 'Bull_game_rig|Bull_game_rig|Bull_game_walk',
-            indices: [6],
-            modelIds: ['modelo-ar-espana'],
+            indices: [16, 17],
+            modelIds: ['modelo-ar-espana-0', 'modelo-ar-espana-1'],
             video: 'Spain.mp4'
         },
         'tunez': { 
             name: 'Túnez', 
             modelFile: 'muebleTun.glb', 
             animName: 'Object_3Action.003',
-            indices: [7],
-            modelIds: ['modelo-ar-tunez'],
+            indices: [18, 19, 20],
+            modelIds: ['modelo-ar-tunez-0', 'modelo-ar-tunez-1', 'modelo-ar-tunez-2'],
             video: null
         },
-        'uruguay2': { 
+        'uruguay': { 
             name: 'Uruguay', 
             modelFile: 'mateUru.glb', 
             animName: 'move.001',
-            indices: [8],
-            modelIds: ['modelo-ar-uruguay2'],
+            indices: [21, 22, 23],
+            modelIds: ['modelo-ar-uruguay-0', 'modelo-ar-uruguay-1', 'modelo-ar-uruguay-2'],
             video: null
         },
         'uzbekistan': { 
             name: 'Uzbekistán', 
             modelFile: 'tazaUz.glb', 
             animName: 'servir',
-            indices: [9],
-            modelIds: ['modelo-ar-uzbekistan'],
+            indices: [24, 25, 26],
+            modelIds: ['modelo-ar-uzbekistan-0', 'modelo-ar-uzbekistan-1', 'modelo-ar-uzbekistan-2'],
             video: null
         }
     },
@@ -148,16 +140,42 @@ const Scamera = {
         console.log("🔧 Configurando listeners de targets...");
         
         const countryMap = {
-            'target-colombia': 'colombia',
-            'target-japon': 'japon',
-            'target-corea': 'corea',
-            'target-mexico': 'mexico',
-            'target-uruguay': 'uruguay',
-            'target-sudafrica': 'sudafrica',
-            'target-espana': 'espana',
-            'target-tunez': 'tunez',
-            'target-uruguay2': 'uruguay2',
-            'target-uzbekistan': 'uzbekistan'
+            // Colombia (0, 1, 2)
+            'target-colombia-0': 'colombia',
+            'target-colombia-1': 'colombia',
+            'target-colombia-2': 'colombia',
+            // Japan (3, 4, 5, 6)
+            'target-japon-0': 'japon',
+            'target-japon-1': 'japon',
+            'target-japon-2': 'japon',
+            'target-japon-3': 'japon',
+            // Korea (7, 8)
+            'target-corea-0': 'corea',
+            'target-corea-1': 'corea',
+            // Mexico (9, 10, 11, 12, 13)
+            'target-mexico-0': 'mexico',
+            'target-mexico-1': 'mexico',
+            'target-mexico-2': 'mexico',
+            'target-mexico-3': 'mexico',
+            'target-mexico-4': 'mexico',
+            // South Africa (14, 15)
+            'target-sudafrica-0': 'sudafrica',
+            'target-sudafrica-1': 'sudafrica',
+            // Spain (16, 17)
+            'target-espana-0': 'espana',
+            'target-espana-1': 'espana',
+            // Tunisia (18, 19, 20)
+            'target-tunez-0': 'tunez',
+            'target-tunez-1': 'tunez',
+            'target-tunez-2': 'tunez',
+            // Uruguay (21, 22, 23)
+            'target-uruguay-0': 'uruguay',
+            'target-uruguay-1': 'uruguay',
+            'target-uruguay-2': 'uruguay',
+            // Uzbekistan (24, 25, 26)
+            'target-uzbekistan-0': 'uzbekistan',
+            'target-uzbekistan-1': 'uzbekistan',
+            'target-uzbekistan-2': 'uzbekistan'
         };
 
         // Esperar a que MindAR esté listo
@@ -198,8 +216,6 @@ const Scamera = {
     onTargetFound(country) {
         if (this.currentCountry === country) return;
         
-        const dataCountry = country === 'uruguay2' ? 'uruguay' : country;
-        
         // Ocultar modelos del país anterior
         if (this.currentCountry) {
             this.hideARModel(this.currentCountry);
@@ -212,7 +228,7 @@ const Scamera = {
         this.showNotification(`🎯 ${config.name} detectado!`);
         this.updateStatus(`Escaneo activo - ${config.name} detectado`);
         
-        this.showCountryInfo(dataCountry);
+        this.showCountryInfo(country);
         this.showARModel(country);
     },
 
@@ -537,7 +553,7 @@ const Scamera = {
             return;
         }
 
-        const dataCountry = this.currentCountry === 'uruguay2' ? 'uruguay' : this.currentCountry;
+        const dataCountry = this.currentCountry;
         const triviaData = this.data.trivia?.[dataCountry];
         if (!triviaData || triviaData.length === 0) {
             container.innerHTML = '<p class="text-center">No hay trivia disponible para este país</p>';
@@ -621,7 +637,7 @@ const Scamera = {
             return;
         }
 
-        const dataCountry = this.currentCountry === 'uruguay2' ? 'uruguay' : this.currentCountry;
+        const dataCountry = this.currentCountry;
         const stats = this.data.estadisticas?.[dataCountry];
         this.updateStatsUI(stats || {});
     },
@@ -721,7 +737,7 @@ const Scamera = {
     updateInfoModal() {
         if (!this.currentCountry) return;
 
-        const dataCountry = this.currentCountry === 'uruguay2' ? 'uruguay' : this.currentCountry;
+        const dataCountry = this.currentCountry;
         const countryData = this.data[dataCountry];
         const config = this.countryConfig[this.currentCountry];
         if (!countryData || !config) return;
@@ -765,7 +781,7 @@ const Scamera = {
 
         // Usar THREE.GLTFLoader de A-Frame
         const loader = new THREE.GLTFLoader();
-        const countryKey = this.currentCountry === 'uruguay2' ? 'uruguay' : this.currentCountry;
+        const countryKey = this.currentCountry;
         const modelFile = this.currentCountry 
             ? `./models/${this.countryConfig[this.currentCountry].modelFile}`
             : './models/toro.glb';

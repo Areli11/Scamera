@@ -40,9 +40,9 @@
     <h5 id="status-text" class="text-center">Presiona "Iniciar Escáner" para comenzar</h5>
 
     <!-- Scanner Container -->
-    <div class="scanner-container">
+    <divclass="scanner-container">
         <a-scene id="ar-scene" 
-                mindar-image="imageTargetSrc: ./targets/targets01.mind; autoStart: false; uiScanning: no; uiLoading: no; maxTrack: 1; filterMinCF: 0.0001; filterBeta: 1000;"
+                mindar-image="imageTargetSrc: ./targets/targets03.mind; autoStart: false; uiScanning: no; uiLoading: no; maxTrack: 1; filterMinCF: 0.0001; filterBeta: 1000;"
                 mindar-image-ui="displayMode: no"
                 color-space="sRGB" 
                 renderer="colorManagement: true, physicallyCorrectLights"
@@ -72,74 +72,103 @@
 
             <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-            <!-- Target: Colombia - Index 0 -->
-            <a-entity id="target-colombia" mindar-image-target="targetIndex: 0">
-                <a-entity id="modelo-ar-colombia" gltf-model="#modelo-colombia" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Colombia targets (0, 1, 2) -->
+            <a-entity id="target-colombia-0" mindar-image-target="targetIndex: 0">
+                <a-entity id="modelo-ar-colombia-0" gltf-model="#modelo-colombia" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-colombia-1" mindar-image-target="targetIndex: 1">
+                <a-entity id="modelo-ar-colombia-1" gltf-model="#modelo-colombia" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-colombia-2" mindar-image-target="targetIndex: 2">
+                <a-entity id="modelo-ar-colombia-2" gltf-model="#modelo-colombia" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: Japón - Index 1 -->
-            <a-entity id="target-japon" mindar-image-target="targetIndex: 1">
-                <a-entity id="modelo-ar-japon" gltf-model="#modelo-japon" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Japan targets (3, 4, 5, 6) -->
+            <a-entity id="target-japon-0" mindar-image-target="targetIndex: 3">
+                <a-entity id="modelo-ar-japon-0" gltf-model="#modelo-japon" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-japon-1" mindar-image-target="targetIndex: 4">
+                <a-entity id="modelo-ar-japon-1" gltf-model="#modelo-japon" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-japon-2" mindar-image-target="targetIndex: 5">
+                <a-entity id="modelo-ar-japon-2" gltf-model="#modelo-japon" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-japon-3" mindar-image-target="targetIndex: 6">
+                <a-entity id="modelo-ar-japon-3" gltf-model="#modelo-japon" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: Corea del Sur - Index 2 -->
-            <a-entity id="target-corea" mindar-image-target="targetIndex: 2">
-                <a-entity id="modelo-ar-corea" gltf-model="#modelo-corea" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Korea targets (7, 8) -->
+            <a-entity id="target-corea-0" mindar-image-target="targetIndex: 7">
+                <a-entity id="modelo-ar-corea-0" gltf-model="#modelo-corea" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-corea-1" mindar-image-target="targetIndex: 8">
+                <a-entity id="modelo-ar-corea-1" gltf-model="#modelo-corea" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: México - Index 3 -->
-            <a-entity id="target-mexico" mindar-image-target="targetIndex: 3">
-                <a-entity id="modelo-ar-mexico" gltf-model="#modelo-mexico" visible="false"
-                    position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Mexico targets (9, 10, 11, 12, 13) -->
+            <a-entity id="target-mexico-0" mindar-image-target="targetIndex: 9">
+                <a-entity id="modelo-ar-mexico-0" gltf-model="#modelo-mexico" visible="false" position="0 0 0" scale="0.5 0.5 0.5" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-mexico-1" mindar-image-target="targetIndex: 10">
+                <a-entity id="modelo-ar-mexico-1" gltf-model="#modelo-mexico" visible="false" position="0 0 0" scale="0.5 0.5 0.5" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-mexico-2" mindar-image-target="targetIndex: 11">
+                <a-entity id="modelo-ar-mexico-2" gltf-model="#modelo-mexico" visible="false" position="0 0 0" scale="0.5 0.5 0.5" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-mexico-3" mindar-image-target="targetIndex: 12">
+                <a-entity id="modelo-ar-mexico-3" gltf-model="#modelo-mexico" visible="false" position="0 0 0" scale="0.5 0.5 0.5" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-mexico-4" mindar-image-target="targetIndex: 13">
+                <a-entity id="modelo-ar-mexico-4" gltf-model="#modelo-mexico" visible="false" position="0 0 0" scale="0.5 0.5 0.5" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: Uruguay 1 - Index 4 -->
-            <a-entity id="target-uruguay" mindar-image-target="targetIndex: 4">
-                <a-entity id="modelo-ar-uruguay1" gltf-model="#modelo-uruguay" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- South Africa targets (14, 15) -->
+            <a-entity id="target-sudafrica-0" mindar-image-target="targetIndex: 14">
+                <a-entity id="modelo-ar-sudafrica-0" gltf-model="#modelo-sudafrica" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-sudafrica-1" mindar-image-target="targetIndex: 15">
+                <a-entity id="modelo-ar-sudafrica-1" gltf-model="#modelo-sudafrica" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: Sudáfrica - Index 5 -->
-            <a-entity id="target-sudafrica" mindar-image-target="targetIndex: 5">
-                <a-entity id="modelo-ar-sudafrica" gltf-model="#modelo-sudafrica" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Spain targets (16, 17) -->
+            <a-entity id="target-espana-0" mindar-image-target="targetIndex: 16">
+                <a-entity id="modelo-ar-espana-0" gltf-model="#modelo-espana" visible="false" position="0 0 0" scale="0.3 0.3 0.3" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-espana-1" mindar-image-target="targetIndex: 17">
+                <a-entity id="modelo-ar-espana-1" gltf-model="#modelo-espana" visible="false" position="0 0 0" scale="0.3 0.3 0.3" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: España - Index 6 -->
-            <a-entity id="target-espana" mindar-image-target="targetIndex: 6">
-                <a-entity id="modelo-ar-espana" gltf-model="#modelo-espana" visible="false"
-                    position="0 0 0" scale="0.3 0.3 0.3" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Tunisia targets (18, 19, 20) -->
+            <a-entity id="target-tunez-0" mindar-image-target="targetIndex: 18">
+                <a-entity id="modelo-ar-tunez-0" gltf-model="#modelo-tunez" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-tunez-1" mindar-image-target="targetIndex: 19">
+                <a-entity id="modelo-ar-tunez-1" gltf-model="#modelo-tunez" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-tunez-2" mindar-image-target="targetIndex: 20">
+                <a-entity id="modelo-ar-tunez-2" gltf-model="#modelo-tunez" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: Túnez - Index 7 -->
-            <a-entity id="target-tunez" mindar-image-target="targetIndex: 7">
-                <a-entity id="modelo-ar-tunez" gltf-model="#modelo-tunez" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Uruguay targets (21, 22, 23) -->
+            <a-entity id="target-uruguay-0" mindar-image-target="targetIndex: 21">
+                <a-entity id="modelo-ar-uruguay-0" gltf-model="#modelo-uruguay" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-uruguay-1" mindar-image-target="targetIndex: 22">
+                <a-entity id="modelo-ar-uruguay-1" gltf-model="#modelo-uruguay" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-uruguay-2" mindar-image-target="targetIndex: 23">
+                <a-entity id="modelo-ar-uruguay-2" gltf-model="#modelo-uruguay" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
 
-            <!-- Target: Uruguay 2 - Index 8 -->
-            <a-entity id="target-uruguay2" mindar-image-target="targetIndex: 8">
-                <a-entity id="modelo-ar-uruguay2" gltf-model="#modelo-uruguay" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <!-- Uzbekistan targets (24, 25, 26) -->
+            <a-entity id="target-uzbekistan-0" mindar-image-target="targetIndex: 24">
+                <a-entity id="modelo-ar-uzbekistan-0" gltf-model="#modelo-uzbekistan" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
-
-            <!-- Target: Uzbekistán - Index 9 -->
-            <a-entity id="target-uzbekistan" mindar-image-target="targetIndex: 9">
-                <a-entity id="modelo-ar-uzbekistan" gltf-model="#modelo-uzbekistan" visible="false"
-                    position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
-                    class="modelo-ar"></a-entity>
+            <a-entity id="target-uzbekistan-1" mindar-image-target="targetIndex: 25">
+                <a-entity id="modelo-ar-uzbekistan-1" gltf-model="#modelo-uzbekistan" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
+            </a-entity>
+            <a-entity id="target-uzbekistan-2" mindar-image-target="targetIndex: 26">
+                <a-entity id="modelo-ar-uzbekistan-2" gltf-model="#modelo-uzbekistan" visible="false" position="0 0 0" scale="0.8 0.8 0.8" class="modelo-ar"></a-entity>
             </a-entity>
         </a-scene>
     </div>

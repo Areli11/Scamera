@@ -3,7 +3,7 @@
     "titulo": "Selección de México",
     "descripcion": "La selección de fútbol de México, conocida como 'El Tricolor', es una de las más reconocidas de CONCACAF. Ha participado en múltiples Copas del Mundo y es famosa por sus vibrante uniforme verde.",
     "modelo": "alebrijeMex.glb",
-    "animacion": "cat_rig",
+    "animacion": "cat_rig|cat_rig|Animation",
     "tradicion": "Los alebrijes son una de las artesanías más representativas de México, especialmente del estado de Oaxaca. Estas figuras coloridas representan criaturas fantásticas formadas por la combinación de distintos animales reales o imaginarios. Su origen se remonta a la década de 1930, cuando el artesano Pedro Linares creó estas figuras inspiradas en un sueño lleno de seres extraños que repetían la palabra 'alebrije'. Con el tiempo, los artesanos oaxaqueños adaptaron la tradición utilizando madera de copal tallada a mano y decorándola con patrones y colores vibrantes. Hoy en día, los alebrijes son símbolos del arte popular mexicano y reflejan la creatividad, la imaginación y la riqueza cultural del país.",
     "futbol": "La selección nacional de México es una de las más importantes de América y la más exitosa de la región de la CONCACAF. Ha participado en numerosas Copas del Mundo y ha sido anfitriona del torneo en dos ocasiones: en 1970 y 1986, ambos celebrados en el histórico Estadio Azteca. En esos torneos, México alcanzó los cuartos de final, su mejor resultado en la competición. Además, el equipo ha ganado varias Copas Oro de la CONCACAF y ha producido futbolistas destacados que han competido en ligas internacionales. La pasión por el fútbol es una parte fundamental de la cultura mexicana, y cada participación en el Mundial genera gran entusiasmo entre los aficionados."
   },
@@ -11,7 +11,7 @@
     "titulo": "Selección de España",
     "descripcion": "La selección española, llamada 'La Roja', es inmueble en la historia del fútbol mundial. Ganó su primer Mundial en 2010.",
     "modelo": "toro.glb",
-    "animacion": "Bull_game_walk",
+    "animacion": "Bull_game_rig|Bull_game_rig|Bull_game_walk",
     "tradicion": "La tauromaquia —el arte de lidiar toros— ha sido una tradición arraigada en España durante siglos y ha influido en su arte, literatura y cultura popular. A través de las corridas de toros, el toro de lidia y las plazas tradicionales han sido símbolos de identidad y ceremonia social, regulados históricamente por normas estéticas y ritualizadas. Aunque esta práctica genera debate en la actualidad, su presencia en la cultura ibérica se observa también en el arte y la historia, y está reconocida en la legislación española como parte del patrimonio cultural.",
     "futbol": "La selección española de fútbol —conocida como La Roja— es una de las selecciones más exitosas de Europa y del mundo. España ha participado en múltiples Copas del Mundo desde 1934, coronándose campeona del mundo en 2010 y ganando la Eurocopa en 1964, 2008, 2012 y 2024, consolidando su estilo de juego distintivo basado en posesión y técnica. Además, la selección femenina también ha emergido como una potencia global, conquistando el Mundial de 2023 y la UEFA Nations League. Estos logros ilustran la importancia del fútbol en la identidad deportiva española y su influencia continua en el fútbol mundial."
   },
