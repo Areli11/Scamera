@@ -67,70 +67,80 @@
 
             <!-- Target: Colombia - Index 0 -->
             <a-entity id="target-colombia" mindar-image-target="targetIndex: 0">
-                <a-entity id="modelo-ar-colombia" gltf-model="#modelo-colombia" visible="false"
+                <a-entity id="modelo-ar-colombia" gltf-model="#modelo-colombia"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: Japón - Index 1 -->
             <a-entity id="target-japon" mindar-image-target="targetIndex: 1">
-                <a-entity id="modelo-ar-japon" gltf-model="#modelo-japon" visible="false"
+                <a-entity id="modelo-ar-japon" gltf-model="#modelo-japon"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: Corea del Sur - Index 2 -->
             <a-entity id="target-corea" mindar-image-target="targetIndex: 2">
-                <a-entity id="modelo-ar-corea" gltf-model="#modelo-corea" visible="false"
+                <a-entity id="modelo-ar-corea" gltf-model="#modelo-corea"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: México - Index 3 -->
             <a-entity id="target-mexico" mindar-image-target="targetIndex: 3">
-                <a-entity id="modelo-ar-mexico" gltf-model="#modelo-mexico" visible="false"
+                <a-entity id="modelo-ar-mexico" gltf-model="#modelo-mexico"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.5 0.5 0.5" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: Uruguay 1 - Index 4 -->
             <a-entity id="target-uruguay" mindar-image-target="targetIndex: 4">
-                <a-entity id="modelo-ar-uruguay1" gltf-model="#modelo-uruguay" visible="false"
+                <a-entity id="modelo-ar-uruguay1" gltf-model="#modelo-uruguay"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: Sudáfrica - Index 5 -->
             <a-entity id="target-sudafrica" mindar-image-target="targetIndex: 5">
-                <a-entity id="modelo-ar-sudafrica" gltf-model="#modelo-sudafrica" visible="false"
+                <a-entity id="modelo-ar-sudafrica" gltf-model="#modelo-sudafrica"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: España - Index 6 -->
             <a-entity id="target-espana" mindar-image-target="targetIndex: 6">
-                <a-entity id="modelo-ar-espana" gltf-model="#modelo-espana" visible="false"
+                <a-entity id="modelo-ar-espana" gltf-model="#modelo-espana"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.3 0.3 0.3" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: Túnez - Index 7 -->
             <a-entity id="target-tunez" mindar-image-target="targetIndex: 7">
-                <a-entity id="modelo-ar-tunez" gltf-model="#modelo-tunez" visible="false"
+                <a-entity id="modelo-ar-tunez" gltf-model="#modelo-tunez"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: Uruguay 2 - Index 8 -->
             <a-entity id="target-uruguay2" mindar-image-target="targetIndex: 8">
-                <a-entity id="modelo-ar-uruguay2" gltf-model="#modelo-uruguay" visible="false"
+                <a-entity id="modelo-ar-uruguay2" gltf-model="#modelo-uruguay"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
 
             <!-- Target: Uzbekistán - Index 9 -->
             <a-entity id="target-uzbekistan" mindar-image-target="targetIndex: 9">
-                <a-entity id="modelo-ar-uzbekistan" gltf-model="#modelo-uzbekistan" visible="false"
+                <a-entity id="modelo-ar-uzbekistan" gltf-model="#modelo-uzbekistan"     
+                    animation-mixer="clip: *; loop: repeat" visible="false"
                     position="0 0 0" scale="0.8 0.8 0.8" rotation="0 0 0"
                     class="modelo-ar"></a-entity>
             </a-entity>
@@ -154,6 +164,7 @@
         </div>
         <p id="country-description" class="country-info-description"></p>
         <div class="country-info-buttons">
+            <button class="btn" data-bs-toggle="modal">⏯</button>
             <button class="btn" data-bs-toggle="modal" data-bs-target="#videoModal">Vídeo</button>
             <button class="btn" data-bs-toggle="modal" data-bs-target="#infoModal">3D + Info</button>
             <button class="btn" data-bs-toggle="modal" data-bs-target="#triviaModal">Trivia</button>
