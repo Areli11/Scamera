@@ -1,0 +1,448 @@
+{
+  "mexico": {
+    "titulo": "Selección de México",
+    "descripcion": "La selección de fútbol de México, conocida como 'El Tricolor', es una de las más reconocidas de CONCACAF. Ha participado en múltiples Copas del Mundo y es famosa por sus vibrante uniforme verde.",
+    "modelo": "alebrijeMex.glb",
+    "animacion": "cat_rig|cat_rig|Animation",
+    "tradicion": "Los alebrijes son una de las artesanías más representativas de México, especialmente del estado de Oaxaca. Estas figuras coloridas representan criaturas fantásticas formadas por la combinación de distintos animales reales o imaginarios. Su origen se remonta a la década de 1930, cuando el artesano Pedro Linares creó estas figuras inspiradas en un sueño lleno de seres extraños que repetían la palabra 'alebrije'. Con el tiempo, los artesanos oaxaqueños adaptaron la tradición utilizando madera de copal tallada a mano y decorándola con patrones y colores vibrantes. Hoy en día, los alebrijes son símbolos del arte popular mexicano y reflejan la creatividad, la imaginación y la riqueza cultural del país.",
+    "futbol": "La selección nacional de México es una de las más importantes de América y la más exitosa de la región de la CONCACAF. Ha participado en numerosas Copas del Mundo y ha sido anfitriona del torneo en dos ocasiones: en 1970 y 1986, ambos celebrados en el histórico Estadio Azteca. En esos torneos, México alcanzó los cuartos de final, su mejor resultado en la competición. Además, el equipo ha ganado varias Copas Oro de la CONCACAF y ha producido futbolistas destacados que han competido en ligas internacionales. La pasión por el fútbol es una parte fundamental de la cultura mexicana, y cada participación en el Mundial genera gran entusiasmo entre los aficionados."
+  },
+  "espana": {
+    "titulo": "Selección de España",
+    "descripcion": "La selección española, llamada 'La Roja', es inmueble en la historia del fútbol mundial. Ganó su primer Mundial en 2010.",
+    "modelo": "toro.glb",
+    "animacion": "Bull_game_rig|Bull_game_rig|Bull_game_walk",
+    "tradicion": "La tauromaquia —el arte de lidiar toros— ha sido una tradición arraigada en España durante siglos y ha influido en su arte, literatura y cultura popular. A través de las corridas de toros, el toro de lidia y las plazas tradicionales han sido símbolos de identidad y ceremonia social, regulados históricamente por normas estéticas y ritualizadas. Aunque esta práctica genera debate en la actualidad, su presencia en la cultura ibérica se observa también en el arte y la historia, y está reconocida en la legislación española como parte del patrimonio cultural.",
+    "futbol": "La selección española de fútbol —conocida como La Roja— es una de las selecciones más exitosas de Europa y del mundo. España ha participado en múltiples Copas del Mundo desde 1934, coronándose campeona del mundo en 2010 y ganando la Eurocopa en 1964, 2008, 2012 y 2024, consolidando su estilo de juego distintivo basado en posesión y técnica. Además, la selección femenina también ha emergido como una potencia global, conquistando el Mundial de 2023 y la UEFA Nations League. Estos logros ilustran la importancia del fútbol en la identidad deportiva española y su influencia continua en el fútbol mundial."
+  },
+  "uruguay": {
+    "titulo": "Selección de Uruguay",
+    "descripcion": "Uruguay, 'La Celeste', es la selección más vieja en ganar un Mundial (1930). Cuenta con 2 títulos de Copa del Mundo.",
+    "modelo": "mateUru.glb",
+    "animacion": "move.001",
+    "tradicion": "El mate es mucho más que una infusión en Uruguay: es un símbolo de identidad nacional y un ritual social profundamente arraigado. Preparado con hojas de yerba mate y servido en un recipiente tradicional (también llamado mate) con una bombilla metálica, su consumo está presente en parques, hogares, oficinas y reuniones familiares. Uruguay es uno de los países con mayor consumo per cápita de yerba mate en el mundo. El acto de “cebar” mate —servirlo y compartirlo en ronda— representa confianza, igualdad y comunidad. No es simplemente una bebida, sino un acto social que refuerza vínculos. En la vida cotidiana uruguaya, el termo y el mate acompañan a las personas como parte inseparable de su día a día, reflejando una cultura de cercanía y tradición transmitida por generaciones.",
+    "futbol": "Uruguay es una de las naciones más históricas del fútbol mundial. La selección uruguaya ganó la primera Copa del Mundo en 1930, celebrada en Montevideo, y repitió la hazaña en 1950 con la legendaria victoria ante Brasil en el estadio Maracaná, episodio conocido como el “Maracanazo”. La Selección de fútbol de Uruguay, conocida como “La Celeste”, también ha conquistado múltiples títulos de la Copa América. Figuras históricas como Obdulio Varela, Diego Forlán, Luis Suárez y Edinson Cavani han marcado generaciones. A pesar de su pequeña población, Uruguay es considerado una potencia histórica del fútbol gracias a su mentalidad competitiva y tradición formativa. "
+  },
+  "corea": {
+    "titulo": "Selección de Corea del Sur",
+    "descripcion": "Corea del Sur, 'Los Taeguk Warriors', fue la primera selección asiática en llegar a semifinal de un Mundial (2002).",
+    "modelo": "casaKor.glb",
+    "animacion": "Sketchfab_modelAction",
+    "tradicion": "La vivienda tradicional coreana, conocida como Hanok, refleja armonía con la naturaleza y principios filosóficos confucianos. Construidas con madera, piedra y papel hanji, estas casas están diseñadas para adaptarse al clima mediante el sistema de calefacción por suelo radiante llamado ondol. El diseño del Hanok privilegia la orientación, la ventilación y la conexión con el entorno, integrando patios interiores y techos curvos elegantes. Más que arquitectura, representa una visión cultural basada en equilibrio, respeto y funcionalidad. ",
+    "futbol": "La Selección de fútbol de Corea del Sur es la selección asiática con más participaciones en Copas del Mundo. Su mayor hazaña ocurrió en 2002, cuando como anfitriona alcanzó las semifinales, convirtiéndose en el primer equipo asiático en lograrlo. Figuras como Park Ji-sung y Son Heung-min han sido símbolos del talento coreano en ligas europeas. Corea del Sur es reconocida por su disciplina táctica, velocidad y preparación física, elementos que le han permitido competir al más alto nivel internacional. "
+  },
+  "japon": {
+    "titulo": "Selección de Japón",
+    "descripcion": "Japón, 'Samurai Blue', es una de las potencias asiáticas con 4 títulos de Copa Asiática.",
+    "modelo": "ramenJapn.glb",
+    "animacion": "ramenMove",
+    "tradicion": "El ramen es uno de los platos más populares de Japón y un símbolo contemporáneo de su cultura gastronómica. Consiste en un caldo, generalmente a base de cerdo, pollo o miso, acompañado de fideos de trigo, carne, huevo y vegetales. Aunque su origen tiene influencia china, Japón lo transformó en un ícono nacional con estilos regionales únicos como el tonkotsu de Fukuoka o el miso ramen de Hokkaido. El ramen refleja la precisión culinaria japonesa, donde el equilibrio del sabor (umami), la textura y la presentación son fundamentales. Existen museos dedicados al ramen y una cultura especializada en perfeccionar cada componente del plato, mostrando cómo una comida cotidiana puede convertirse en expresión cultural.",
+    "futbol": "La Selección de fútbol de Japón, conocida como “Samurai Blue”, se ha consolidado como una potencia del fútbol asiático. Desde su primera participación en 1998, Japón ha alcanzado repetidamente los octavos de final, incluyendo actuaciones destacadas en 2002 (como anfitrión junto a Corea del Sur), 2010, 2018 y 2022. En 2022 sorprendió al mundo al derrotar a Alemania y España en la fase de grupos. Jugadores como Hidetoshi Nakata, Keisuke Honda y Takefusa Kubo han sido referentes internacionales. El crecimiento del fútbol japonés ha sido estratégico, con fuerte inversión en formación juvenil y profesionalización desde la creación de la J-League en 1993. "
+  },
+  "tunez": {
+    "titulo": "Selección de Túnez",
+    "descripcion": "Túnez, 'Los Águilas de Cartago', es una selección africana competitiva con多次 participaciones mundialistas.",
+    "modelo": "muebleTun.glb",
+    "animacion": "Object_3Action.003",
+    "tradicion": "La cerámica tunecina es una de las expresiones artesanales más representativas del país. Ciudades como Nabeul son reconocidas por su producción de piezas decorativas pintadas a mano con motivos geométricos y florales de influencia árabe y mediterránea. Los taburetes y piezas de cerámica no solo cumplen funciones utilitarias, sino que forman parte de la identidad visual tunecina, combinando colores intensos como azul cobalto, amarillo y verde. Esta tradición artesanal se remonta a siglos de intercambio cultural entre civilizaciones fenicias, romanas, árabes y otomanas, lo que convierte cada pieza en una síntesis histórica del Mediterráneo.",
+    "futbol": "La Selección de fútbol de Túnez, conocida como “Las Águilas de Cartago”, es una de las selecciones africanas con mayor presencia en Copas del Mundo. Túnez hizo historia en 1978 al convertirse en el primer país africano en ganar un partido en un Mundial, derrotando a México. Ha participado en varias ediciones del torneo, incluyendo 1998, 2002, 2006, 2018 y 2022, donde logró una destacada victoria ante Francia. A nivel continental, ganó la Copa Africana de Naciones en 2004 como anfitrión. El fútbol es el deporte más popular del país y una fuente de orgullo nacional. "
+  },
+  "sudafrica": {
+    "titulo": "Selección de Sudáfrica",
+    "descripcion": "Sudáfrica, 'Bafana Bafana', fue sede del Mundial 2010, siendo el primer país africano en organizar el torneo.",
+    "modelo": "craneoSud.glb",
+    "animacion": "Object_3Action",
+    "tradicion": "Sudáfrica alberga uno de los patrimonios arqueológicos más importantes del mundo: la famosa “Cuna de la Humanidad”, un conjunto de sitios fósiles donde se han descubierto restos de homínidos que ayudan a entender la evolución humana desde hace millones de años. En estos yacimientos, como la zona de Sterkfontein, han emergido esqueletos y herramientas primitivas que sitúan a África como el origen de nuestra especie. Además de su importancia científica, estas tierras cuentan con numerosos lugares Patrimonio de la Humanidad por la UNESCO, reflejando una historia profunda que abarca culturas, paisajes naturales y encuentros humanos milenarios.",
+    "futbol": "El fútbol es uno de los deportes más seguidos en Sudáfrica. El país fue anfitrión de la Copa Mundial de la FIFA en 2010, marcando la primera vez que el torneo se celebró en suelo africano, un símbolo de orgullo continental. La selección sudafricana, conocida como Bafana Bafana, ha participado en varias ediciones de la Copa Mundial y ha logrado éxitos notables en torneos africanos, incluyendo la Copa Africana de Naciones. El Mundial 2010, con míticos partidos y estadios llenos, sigue siendo un hito histórico para el fútbol africano y global."
+  },
+  "colombia": {
+    "titulo": "Selección de Colombia",
+    "descripción": "Colombia, 'Los Cafeteros', es conocida por su talento ofensivo y ha participado en 6 mundiales.",
+    "modelo": "tucanCol.glb",
+    "animacion": "tucanMove",
+    "tradicion": "Colombia es uno de los países más ricos en biodiversidad del planeta. Aunque su tamaño geográfico es intermedio, alberga una enorme variedad de ecosistemas —desde selvas amazónicas hasta páramos andinos y costas caribeñas— que le permiten hospedar cerca del 10 % de todas las especies del mundo. El país lidera el ranking global en número de aves, mariposas y orquídeas, y ocupa puestos destacados en anfibios, peces, reptiles y mamíferos. Esta riqueza biológica convierte a Colombia en un laboratorio natural vivo, donde la naturaleza mantiene un equilibrio dinámico y diverso que sigue asombrando a científicos, conservacionistas y visitantes por igual.",
+    "futbol": "El fútbol es uno de los deportes líderes en Colombia, con amplia popularidad y una fuerte afición en todo el país. La selección nacional ha tenido presencia destacada en varias ediciones de la Copa Mundial de la FIFA, con actuaciones memorables que han elevado su perfil internacional. Figuras como Carlos Valderrama, Faustino Asprilla, James Rodríguez y Radamel Falcao han dejado huella en la memoria futbolística, llevando el estilo colombiano de juego rápido y técnico a escenarios globales. Aunque aún busca su primer título mundial, Colombia ha generado momentos icónicos en la historia de los mundiales y mantiene una pasión futbolística vibrante."
+  },
+  "uzbekistan": {
+    "titulo": "Selección de Uzbekistán",
+    "descripcion": "Uzbekistán, 'Los Lobos Blancos', es la selección centroasiática más exitosa en la Copa Asiática.",
+    "modelo": "tazaUz.glb",
+    "animacion": "servir",
+    "tradicion": "En Uzbekistán, el “choynak” es más que una simple tetera: forma parte integral de la hospitalidad uzbeka. El té, especialmente el té verde, se sirve en casi todas las reuniones sociales, desde la vida familiar hasta las celebraciones en las casas tradicionales de té —conocidas como chaykhanas— donde amigos y visitantes comparten historias y alimentos. Esta costumbre refleja una cultura de hospitalidad intensa, en que ofrecer té a un invitado simboliza respeto, calidez y amistad. La ceremonia del té también acompaña postres típicos como chak-chak o halva, integrándose profundamente en la identidad culinaria y social del país.",
+    "futbol": "La selección nacional de fútbol de Uzbekistán representa al país desde la independencia tras la desintegración de la Unión Soviética. Aunque su presencia en Copas del Mundo todavía no se había concretado hasta el Mundial 2026 —será su primera participación en la cita orbital—, Uzbekistán ha crecido en el fútbol asiático con destacadas actuaciones en la AFC Asian Cup y en torneos juveniles. El equipo ha sido considerado uno de los más competitivos de Asia Central, y su clasificación al Mundial marca un hito histórico para el fútbol del país."
+  },
+  "trivia": {
+    "mexico": [
+      {
+        "pregunta": "¿En qué años México fue sede del Mundial?",
+        "opciones": [
+          {"texto": "1970 y 1986", "correcta": true},
+          {"texto": "1994 y 1998", "correcta": false},
+          {"texto": "2002 y 2006", "correcta": false},
+          {"texto": "1982 y 1990", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Cuál es el apodo de la selección mexicana?",
+        "opciones": [
+          {"texto": "El Tricolor", "correcta": true},
+          {"texto": "Los Aztecas", "correcta": false},
+          {"texto": "Los Charros", "correcta": false},
+          {"texto": "Los Vaqueros", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Quién es el máximo goleador histórico de la selección mexicana?",
+        "opciones": [
+          {"texto": "Javier Hernández", "correcta": true},
+          {"texto": "Cuauhtémoc Blanco", "correcta": false},
+          {"texto": "Hugo Sánchez", "correcta": false},
+          {"texto": "Luis Hernández", "correcta": false}
+        ]
+      }
+    ],
+    "espana": [
+      {
+        "pregunta": "¿En qué año España ganó su primer Mundial?",
+        "opciones": [
+          {"texto": "2010", "correcta": true},
+          {"texto": "2008", "correcta": false},
+          {"texto": "2012", "correcta": false},
+          {"texto": "2006", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Qué estilo de juego popularizó España?",
+        "opciones": [
+          {"texto": "Tiki-taka", "correcta": true},
+          {"texto": "Catenaccio", "correcta": false},
+          {"texto": "Gegenpressing", "correcta": false},
+          {"texto": "Fútbol directo", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": " ¿Qué tradición cultural española está asociada al enfrentamiento ritual con toros?",
+        "opciones": [
+          {"texto": "Encierro", "correcta": false},
+          {"texto": "Tauromaquia", "correcta": true},
+          {"texto": "Flamenco", "correcta": false},
+          {"texto": "Fallas", "correcta": false}
+        ]
+      }
+    ],
+    "uruguay": [
+      {
+        "pregunta": "¿Cuántos mundiales ha ganado Uruguay?",
+        "opciones": [
+          {"texto": "2", "correcta": true},
+          {"texto": "1", "correcta": false},
+          {"texto": "3", "correcta": false},
+          {"texto": "4", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿En qué año Uruguay ganó el primer Mundial de la FIFA?",
+        "opciones": [
+          {"texto": "1924", "correcta": false},
+          {"texto": "1930", "correcta": true},
+          {"texto": "1950", "correcta": false},
+          {"texto": "1962", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Cómo se conoce la histórica victoria de Uruguay sobre Brasil en 1950?",
+        "opciones": [
+          {"texto": "La Celeste Final", "correcta": false},
+          {"texto": "El Gol Eterno", "correcta": false},
+          {"texto": "La Final del Siglo", "correcta": false},
+          {"texto": "El Maracanazo", "correcta": true}
+        ]
+      }
+    ],
+    "corea": [
+      {
+        "pregunta": "¿Cuál ha sido el mejor resultado de Corea del Sur en un Mundial?",
+        "opciones": [
+          {"texto": "Campeón", "correcta": false},
+          {"texto": "Subcampeón", "correcta": false},
+          {"texto": "Semifinal", "correcta": true},
+          {"texto": "Cuartos de final", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿En qué Mundial Corea del Sur alcanzó las semifinales?",
+        "opciones": [
+          {"texto": "1998", "correcta": false},
+          {"texto": "2002", "correcta": true},
+          {"texto": "2006", "correcta": false},
+          {"texto": "2010", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Cómo se llama la vivienda tradicional coreana?",
+        "opciones": [
+          {"texto": "Pagoda", "correcta": false},
+          {"texto": "Tatami", "correcta": false},
+          {"texto": "Dojang", "correcta": false},
+          {"texto": "Hanok", "correcta": true}
+        ]
+      }
+    ],
+    "japon": [
+      {
+        "pregunta": "¿Cuántas Copas Asiáticas ha ganado Japón?",
+        "opciones": [
+          {"texto": "4", "correcta": true},
+          {"texto": "3", "correcta": false},
+          {"texto": "5", "correcta": false},
+          {"texto": "2", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿En qué año Japón debutó en una Copa Mundial masculina?",
+        "opciones": [
+          {"texto": "1994", "correcta": false},
+          {"texto": "1998", "correcta": true},
+          {"texto": "2002", "correcta": false},
+          {"texto": "2006", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Qué dos selecciones derrotó Japón en la fase de grupos del Mundial 2022?",
+        "opciones": [
+          {"texto": "Brasil y Argentina", "correcta": false},
+          {"texto": "Francia e Inglaterra", "correcta": false},
+          {"texto": "Alemania y España", "correcta": true},
+          {"texto": "Portugal y Países Bajos", "correcta": false}
+        ]
+      }
+    ],
+    "tunez": [
+      {
+        "pregunta": "¿En qué año Túnez ganó su primera Copa Africana?",
+        "opciones": [
+          {"texto": "2004", "correcta": true},
+          {"texto": "1996", "correcta": false},
+          {"texto": "2000", "correcta": false},
+          {"texto": "2008", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿En qué año Túnez logró la primera victoria africana en un Mundial?",
+        "opciones": [
+          {"texto": "1974", "correcta": false},
+          {"texto": "1978", "correcta": true},
+          {"texto": "1982", "correcta": false},
+          {"texto": "1990", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Qué ciudad tunecina es famosa por su tradición en cerámica decorativa?",
+        "opciones": [
+          {"texto": "Sfax", "correcta": false},
+          {"texto": "Nabeul", "correcta": true},
+          {"texto": "Cartago", "correcta": false},
+          {"texto": "Monastir", "correcta": false}
+        ]
+      }
+    ],
+    "sudafrica": [
+      {
+        "pregunta": "¿En qué año Sudáfrica fue sede del Mundial?",
+        "opciones": [
+          {"texto": "2010", "correcta": true},
+          {"texto": "2006", "correcta": false},
+          {"texto": "2014", "correcta": false},
+          {"texto": "2002", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Cómo se conoce popularmente a la selección sudafricana?",
+        "opciones": [
+          {"texto": "The Lions", "correcta": false},
+          {"texto": "Bafana Bafana", "correcta": true},
+          {"texto": "The Warriors", "correcta": false},
+          {"texto": "Spring Strikers", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Cómo se llama el sitio arqueológico sudafricano reconocido como origen de importantes fósiles humanos?",
+        "opciones": [
+          {"texto": "Valle de los Reyes", "correcta": false},
+          {"texto": "Monte Kilimanjaro", "correcta": false},
+          {"texto": "Cuna de la Humanidad", "correcta": true},
+          {"texto": "Desierto del Kalahari", "correcta": false}
+        ]
+      }
+    ],
+    "colombia": [
+      {
+        "pregunta": "¿En qué año Colombia alcanzó cuartos de final?",
+        "opciones": [
+          {"texto": "2014", "correcta": true},
+          {"texto": "1990", "correcta": false},
+          {"texto": "2018", "correcta": false},
+          {"texto": "2022", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Cuál ha sido la mejor participación de Colombia en una Copa del Mundo?",
+        "opciones": [
+          {"texto": "Campeón", "correcta": false},
+          {"texto": "Subcampeón", "correcta": false},
+          {"texto": "Cuartos de final", "correcta": true},
+          {"texto": "Semifinal", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿Quién fue el máximo goleador del Mundial 2014?",
+        "opciones": [
+          {"texto": "Radamel Falcao", "correcta": false},
+          {"texto": "Carlos Bacca", "correcta": false},
+          {"texto": "James Rodríguez", "correcta": true},
+          {"texto": "Teófilo Gutiérrez", "correcta": false}
+        ]
+      }
+    ],
+    "uzbekistan": [
+      {
+        "pregunta": "¿Cuál es el apodo de Uzbekistán?",
+        "opciones": [
+          {"texto": "White Wolves", "correcta": true},
+          {"texto": "Desert Eagles", "correcta": false},
+          {"texto": "Sky Blues", "correcta": false},
+          {"texto": "Central Stars", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿En qué Mundial la Selección de Uzbekistán clasificó por primera vez?",
+        "opciones": [
+          {"texto": "2018", "correcta": false},
+          {"texto": "2022", "correcta": false},
+          {"texto": "2026", "correcta": true},
+          {"texto": "Aún no ha clasificado", "correcta": false}
+        ]
+      },
+      {
+        "pregunta": "¿A qué confederación pertenece Uzbekistán?",
+        "opciones": [
+          {"texto": "UEFA", "correcta": false},
+          {"texto": "AFC", "correcta": true},
+          {"texto": "CONMEBOL", "correcta": false},
+          {"texto": "CAF", "correcta": false}
+        ]
+      }
+    ]
+  },
+  "estadisticas": {
+    "espana":{
+      "partidos": [
+        {"jugadorA": "David Villa", "golesA": "59 goles", "jugadorB": "Raúl González", "golesB": "44 goles", "topAp": "Sergio Ramos"},
+        {"equipoA": "España", "equipoB": "Alemania", "golesA": 1, "golesB": 1, "tiempo": "90:00"},
+        {"equipoA": "España", "equipoB": "Japón", "golesA": 1, "golesB": 2, "tiempo": "90:00"}
+      ],
+      "variasAp": {"apA": "Iker Casillas", "apB": "Sergio Busquets"},
+      "titulo": {"uno": "Copa Mundial FIFA", "dos": "Eurocopa"},
+      "racha": {"victorias": {"local": "15", "rival": "."}, "year": {"local": "2008-2009", "rival": "."}},
+      "victoria": {"marcador": "13-0", "year": "1933"},
+      "mundialData": {"data": "Eliminatorias mundialistas", "partidos": "49"}
+    },
+    "uzbekistan":{
+      "partidos":[
+        {"jugadorA":"Maksim Shatskikh","golesA":"38 goles","jugadorB":"Eldor Shomurodov","golesB":"36 goles","topAp":"Server Djeparov"},
+        {"equipoA":"Uzbekistan","equipoB":"Irán","golesA":0,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Uzbekistan","equipoB":"Qatar","golesA":2,"golesB":0,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Server Djeparov","apB":"Odil Ahmedov"},
+      "titulo":{"uno":"Juegos Asiáticos","dos":"Copa CAFA"},
+      "racha":{"victorias":{"local":"8","rival":"."},"year":{"local":"2023-2024","rival":"."}},
+      "victoria":{"marcador":"15-0","year":"1998"},
+      "mundialData":{"data":"Eliminatorias mundialistas","partidos":"60"}
+    },
+    "sudafrica":{
+      "partidos":[
+        {"jugadorA":"Benedict McCarthy","golesA":"31 goles","jugadorB":"Shaun Bartlett","golesB":"29 goles","topAp":"Aaron Mokoena"},
+        {"equipoA":"Sudáfrica","equipoB":"México","golesA":1,"golesB":1,"tiempo":"90:00"},
+        {"equipoA":"Sudáfrica","equipoB":"Francia","golesA":2,"golesB":1,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Aaron Mokoena","apB":"Itumeleng Khune"},
+      "titulo":{"uno":"Copa Africana de Naciones","dos":"Copa COSAFA"},
+      "racha":{"victorias":{"local":"6","rival":"."},"year":{"local":"1996","rival":"."}},
+      "victoria":{"marcador":"6-0","year":"2015"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"10"}
+    },
+    "colombia":{
+      "partidos":[
+        {"jugadorA":"Radamel Falcao","golesA":"36 goles","jugadorB":"James Rodríguez","golesB":"28 goles","topAp":"Carlos Valderrama"},
+        {"equipoA":"Colombia","equipoB":"Alemania","golesA":2,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Colombia","equipoB":"Brasil","golesA":1,"golesB":2,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"David Ospina","apB":"Carlos Valderrama"},
+      "titulo":{"uno":"Copa América","dos":"Copa Kirin"},
+      "racha":{"victorias":{"local":"10","rival":"."},"year":{"local":"1993-1994","rival":"."}},
+      "victoria":{"marcador":"5-0","year":"1993"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"22"}
+    },
+    "corea":{
+      "partidos":[
+        {"jugadorA":"Cha Bum-kun","golesA":"58 goles","jugadorB":"Hwang Sun-hong","golesB":"50 goles","topAp":"Hong Myung-bo"},
+        {"equipoA":"Corea del Sur","equipoB":"Portugal","golesA":2,"golesB":1,"tiempo":"90:00"},
+        {"equipoA":"Corea del Sur","equipoB":"Alemania","golesA":2,"golesB":0,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Hong Myung-bo","apB":"Son Heung-min"},
+      "titulo":{"uno":"Copa Asiática","dos":"Juegos Asiáticos"},
+      "racha":{"victorias":{"local":"9","rival":"."},"year":{"local":"2002","rival":"."}},
+      "victoria":{"marcador":"16-0","year":"2003"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"38"}
+    },
+    "uruguay":{
+      "partidos":[
+        {"jugadorA":"Luis Suárez","golesA":"68 goles","jugadorB":"Edinson Cavani","golesB":"58 goles","topAp":"Diego Godín"},
+        {"equipoA":"Uruguay","equipoB":"Brasil","golesA":2,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Uruguay","equipoB":"Argentina","golesA":0,"golesB":1,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Diego Godín","apB":"Luis Suárez"},
+      "titulo":{"uno":"Copa Mundial FIFA","dos":"Copa América"},
+      "racha":{"victorias":{"local":"12","rival":"."},"year":{"local":"1924-1930","rival":"."}},
+      "victoria":{"marcador":"9-0","year":"1927"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"59"}
+    },
+    "tunez":{
+      "partidos":[
+        {"jugadorA":"Issam Jemaa","golesA":"36 goles","jugadorB":"Wahbi Khazri","golesB":"25 goles","topAp":"Radhi Jaidi"},
+        {"equipoA":"Túnez","equipoB":"Francia","golesA":1,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"Túnez","equipoB":"Dinamarca","golesA":0,"golesB":0,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Radhi Jaidi","apB":"Youssef Msakni"},
+      "titulo":{"uno":"Copa Africana de Naciones","dos":"Copa Árabe"},
+      "racha":{"victorias":{"local":"7","rival":"."},"year":{"local":"2004","rival":"."}},
+      "victoria":{"marcador":"8-1","year":"1960"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"18"}
+    },
+    "japon":{
+      "partidos":[
+        {"jugadorA":"Kunishige Kamamoto","golesA":"75 goles","jugadorB":"Shinji Okazaki","golesB":"50 goles","topAp":"Yasuhito Endo"},
+        {"equipoA":"Japón","equipoB":"Alemania","golesA":2,"golesB":1,"tiempo":"90:00"},
+        {"equipoA":"Japón","equipoB":"España","golesA":2,"golesB":1,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Yasuhito Endo","apB":"Yuto Nagatomo"},
+      "titulo":{"uno":"Copa Asiática","dos":"Copa Kirin"},
+      "racha":{"victorias":{"local":"11","rival":"."},"year":{"local":"2018-2019","rival":"."}},
+      "victoria":{"marcador":"15-0","year":"1967"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"24"}
+    },
+    "mexico":{
+      "partidos":[
+        {"jugadorA":"Javier Hernández","golesA":"52 goles","jugadorB":"Jared Borgetti","golesB":"46 goles","topAp":"Claudio Suárez"},
+        {"equipoA":"México","equipoB":"Alemania","golesA":1,"golesB":0,"tiempo":"90:00"},
+        {"equipoA":"México","equipoB":"Argentina","golesA":0,"golesB":2,"tiempo":"90:00"}
+      ],
+      "variasAp":{"apA":"Claudio Suárez","apB":"Andrés Guardado"},
+      "titulo":{"uno":"Copa Oro","dos":"Copa Confederaciones"},
+      "racha":{"victorias":{"local":"12","rival":"."},"year":{"local":"1993-1997","rival":"."}},
+      "victoria":{"marcador":"13-0","year":"1967"},
+      "mundialData":{"data":"Mundiales jugados","partidos":"60"}
+    }
+  }
+}
+
