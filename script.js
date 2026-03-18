@@ -53,41 +53,41 @@ const Scamera = {
             name: 'Sudáfica', 
             modelFile: 'craneoSud.glb', 
             animName: 'Object_3Action',
-            indices: [14, 15],
-            modelIds: ['modelo-ar-sudafrica-0', 'modelo-ar-sudafrica-1'],
-            video: null
+            indices: [14, 15, 16, 17],
+            modelIds: ['modelo-ar-sudafrica-0', 'modelo-ar-sudafrica-1', 'modelo-ar-sudafrica-2', 'modelo-ar-sudafrica-3'],
+            video: 'SouthAfrica.mp4'
         },
         'espana': { 
             name: 'España', 
             modelFile: 'toro.glb', 
             animName: 'Bull_game_rig|Bull_game_rig|Bull_game_walk',
-            indices: [16, 17],
-            modelIds: ['modelo-ar-espana-0', 'modelo-ar-espana-1'],
+            indices: [18, 19, 20],
+            modelIds: ['modelo-ar-espana-0', 'modelo-ar-espana-1', 'modelo-ar-espana-2'],
             video: 'Spain.mp4'
         },
         'tunez': { 
             name: 'Túnez', 
             modelFile: 'muebleTun.glb', 
             animName: 'Object_3Action.003',
-            indices: [18, 19, 20],
+            indices: [21, 22, 23],
             modelIds: ['modelo-ar-tunez-0', 'modelo-ar-tunez-1', 'modelo-ar-tunez-2'],
-            video: null
+            video: 'Tunisia.mp4'
         },
         'uruguay': { 
             name: 'Uruguay', 
             modelFile: 'mateUru.glb', 
             animName: 'move.001',
-            indices: [21, 22, 23],
+            indices: [24, 25, 26],
             modelIds: ['modelo-ar-uruguay-0', 'modelo-ar-uruguay-1', 'modelo-ar-uruguay-2'],
-            video: null
+            video: 'Uruguay.mp4'
         },
         'uzbekistan': { 
             name: 'Uzbekistán', 
             modelFile: 'tazaUz.glb', 
             animName: 'servir',
-            indices: [24, 25, 26],
+            indices: [27, 28, 29],
             modelIds: ['modelo-ar-uzbekistan-0', 'modelo-ar-uzbekistan-1', 'modelo-ar-uzbekistan-2'],
-            video: null
+            video: 'Uzbekistan.mp4'
         }
     },
 
@@ -158,21 +158,24 @@ const Scamera = {
             'target-mexico-2': 'mexico',
             'target-mexico-3': 'mexico',
             'target-mexico-4': 'mexico',
-            // South Africa (14, 15)
+            // South Africa (14, 15, 16, 17)
             'target-sudafrica-0': 'sudafrica',
             'target-sudafrica-1': 'sudafrica',
-            // Spain (16, 17)
+            'target-sudafrica-2': 'sudafrica',
+            'target-sudafrica-3': 'sudafrica',
+            // Spain (18, 19, 20)
             'target-espana-0': 'espana',
             'target-espana-1': 'espana',
-            // Tunisia (18, 19, 20)
+            'target-espana-2': 'espana',
+            // Tunisia (21, 22, 23)
             'target-tunez-0': 'tunez',
             'target-tunez-1': 'tunez',
             'target-tunez-2': 'tunez',
-            // Uruguay (21, 22, 23)
+            // Uruguay (24, 25, 26)
             'target-uruguay-0': 'uruguay',
             'target-uruguay-1': 'uruguay',
             'target-uruguay-2': 'uruguay',
-            // Uzbekistan (24, 25, 26)
+            // Uzbekistan (27, 28, 29)
             'target-uzbekistan-0': 'uzbekistan',
             'target-uzbekistan-1': 'uzbekistan',
             'target-uzbekistan-2': 'uzbekistan'
